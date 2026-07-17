@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F&amp;A Executive Consultants Contact Page</title>
+    <meta
+        name="description"
+        content="F&amp;A Executive Consultants is a modern accounting, tax and consulting firm partnering with businesses across every sector."
+    >
+    <link rel="icon" type="image/png" href="media/logo/FA-favicon-blue.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+
+   <div class="page-layout">
+     <div id="site-header-placeholder"></div>
+        <main>
+              <!-----CONTACT DETAILS SECTION ----->
+              <section class="contact-intro-section" id="contact-details" aria-label="Get in touch">
+                <div class="row-container contact-intro-content">
+                    <h2 class="h2-section-title">Get in touch</h2>
+                    <p class="p-section-title">Let's build the financial foundation for your next chapter.</p>
+                    <p class="contact-intro-description">Reach out to discuss your accounting, tax or strategic advisory needs. We respond within one business day.</p>
+                </div>
+                <div class="row-container contact-cards-grid">
+                    <article class="contact-card">
+                        <span class="contact-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true">
+                                <path d="M3 6h18v12H3z" />
+                                <path d="m3 7 9 7 9-7" />
+                            </svg>
+                        </span>
+                        <span class="contact-card-label">EMAIL</span>
+                        <p class="contact-card-info">accounting@faexecutive.gr</p>
+                    </article>
+
+                    <article class="contact-card">
+                        <span class="contact-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true">
+                                <path d="M6 3h4l2 5-2.2 2.2a16 16 0 0 0 4 4L16 12l5 2v4a2 2 0 0 1-2 2h-1C10.8 20 4 13.2 4 5V4a1 1 0 0 1 1-1z" />
+                            </svg>
+                        </span>
+                        <span class="contact-card-label">PHONE</span>
+                        <p class="contact-card-info">+30 6977678685</p>
+                    </article>
+
+                    <article class="contact-card">
+                        <span class="contact-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true">
+                                <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>
+                        </span>
+                        <span class="contact-card-label">OFFICE</span>
+                        <p class="contact-card-info">Katsimpa 17, Agios Dimitrios 173 42</p>
+                    </article>
+                </div>
+
+               
+            </section>
+
+            <!-- CONTACT FORM SECTION -->
+            <section class="contact-section">
+        
+        <!-- LEFT COLUMN: Info -->
+        <div class="info-col">
+            <div class="contact-visual">
+                        <img class="contact-visual-image" src="media/FA-contact-us.webp" alt="F&amp;A Scycraper building image">
+                        <aside class="mission-card">
+                            <img class="mission-card-logo" src="media/logo/FA-logo-blue.png" alt="F&amp;A Executive Consultants logo">
+                            <p>Long-term partnerships built on trust, transparency and measurable outcomes.</p>
+                        </aside>
+                    </div>  
+        </div>
+
+        <!-- RIGHT COLUMN: Form -->
+        <div class="form-col">
+            <div class="form-container">
+                <h1 style="margin-top:0; margin-bottom:20px; font-size:24px;">Send us a message</h1>
+                <form action="send-mail.php" method="POST" id="contactForm">
+                     <input type="hidden" name="lang" value="en">
+                    <!-- Name & Email Row -->
+                    <div class="input-row">
+                        <div class="col-half form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="col-half form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <!-- Subject Row -->
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="How can we help?">
+                    </div>
+
+                    <!-- Message Row -->
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBtn">Send message</button>
+                    <div id="form-message" style="display:none; padding: 15px; margin-top: 15px; border-radius: 5px;"></div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+             <div id="site-footer-placeholder"></div>   
+           </main>
+    </div>
+    <script src="components.js"></script>
+    
+    <script>
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const messageContainer = document.getElementById('form-message');
+
+    // Handle successful initial page load messages (from non-AJAX submissions)
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialSuccessMsg = urlParams.get('success');
+    const initialErrorMsg = urlParams.get('error');
+    
+    if (initialSuccessMsg || initialErrorMsg) {
+        showMessage(initialSuccessMsg, initialErrorMsg);
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+    function showMessage(successMsg, errorMsg) {
+        messageContainer.style.display = 'block';
+        messageContainer.className = '';
+        
+        if (successMsg) {
+            messageContainer.className = 'success';
+            messageContainer.innerHTML = '<strong>' + decodeURIComponent(successMsg) + '</strong>';
+            form.reset();
+        } else if (errorMsg) {
+            messageContainer.className = 'error';
+            messageContainer.innerHTML = '<strong>Error:</strong> ' + decodeURIComponent(errorMsg);
+        }
+        
+        setTimeout(() => {
+            messageContainer.style.display = 'none';
+        }, 5000);
+    }
+
+    // Intercept form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Stop the default form submission
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        
+        // Get form data
+        const formData = new FormData(form);
+        
+        // Send via fetch (AJAX)
+        fetch('send-mail.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Parse JSON response from PHP
+            try {
+                const result = JSON.parse(data);
+                showMessage(result.success || null, result.error || null);
+            } catch (e) {
+                showMessage(null, "Unexpected server response");
+            }
+        })
+        .catch(error => {
+            showMessage(null, "Network error. Please try again.");
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send message';
+        });
+    });
+</script>
+</body>
+
+</html>
