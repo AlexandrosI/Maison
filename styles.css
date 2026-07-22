@@ -22,9 +22,9 @@ Sections
     --color-text: #0F1216;
     --color-text-muted: #565759;
     --color-shadow: rgba(36, 35, 80, 0.12);
-    --font-body: "Manrope", "Segoe UI", sans-serif;
-    --font-section-heading: "Inter", "Segoe UI", sans-serif;
-    --font-section-title: "Manrope", "Segoe UI", sans-serif;
+    --font-body: "Manrope", ui-sans-serif, sans-serif;
+    --font-section-heading: "Manrope", "Segoe UI", sans-serif;
+    --font-section-title: "Cormorant Garamond", "Times New Roman", serif;
     --container-width: min(70%, calc(100% - 80px));
 }
 
@@ -42,6 +42,7 @@ body {
     max-width: 2560px;
     margin-inline: auto;
     font-family: var(--font-body);
+    letter-spacing:0.6px;
     color: var(--color-text);
       box-shadow:  1px 8px 8px rgba(0, 0, 0, 0.1),
                  -1px 0px 1px rgba(0, 0, 0, 0.1) ;
@@ -73,7 +74,7 @@ a {
     gap: 12px;
     margin: 0 0 18px;
     font-size: 0.9rem;
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-family: var(--font-section-heading);
@@ -86,10 +87,10 @@ a {
 .p-hero-section-title {
     margin: 0;
     font-family: var(--font-section-title);
-    font-size: clamp(2.1rem, 3.6vw, 4rem);
-    font-weight: 800;
+    font-size: clamp(4.85rem, 5.5vw, 6.6rem);
+    font-weight: 200;
     line-height: 1.04;
-    letter-spacing: -0.04em;
+  
     color: var(--color-primary);
 }
 
@@ -97,8 +98,8 @@ a {
 .p-section-title {
     margin: 0;
     font-family: var(--font-section-title);
-    font-size: clamp(1.85rem, 2.5vw, 2.6rem);
-    font-weight: 800;
+    font-size: clamp(2.85rem, 3.5vw, 3.6rem);
+    font-weight: 200;
     line-height: 1.12;
     color: var(--color-primary);
 }
@@ -374,14 +375,14 @@ a {
 /* Footer */
 
 .site-footer {
-    padding: 72px 0 26px;
+    padding: 0px 0 26px;
     background-color: var(--color-primary);
     color: var(--color-border);
 }
 
 .footer-main-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
+    display: flex;
+    justify-content: center;
     gap: 36px;
     padding-bottom: 34px;
     border-bottom: 1px solid rgba(226, 232, 240, 0.28);
@@ -390,9 +391,10 @@ a {
 .footer-brand-column,
 .footer-nav-column,
 .footer-contact-column {
-    display: grid;
-    align-content: start;
+    display: flex;
+   flex-direction: column;
     gap: 14px;
+    align-items:center;
 }
 
 .site-footer .h2-section-title {
@@ -410,32 +412,23 @@ a {
 }
 
 .footer-brand-image {
-    width: 362px;
+    width: 700px;
     height:auto;
-    object-fit: cover;
-    
+
 }
 
-.footer-brand-text {
-    margin: 0;
-    max-width: 40ch;
-    line-height: 1.75;
-}
+
 
 .footer-nav-column a,
 .footer-contact-column a,
 .footer-contact-column p {
     margin: 0;
-    font-size: 0.96rem;
+    font-size: 1.3rem;
     line-height: 1.65;
-    color: var(--color-border);
+    color: var(--color-primary);
 }
 
-.footer-nav-column a:hover,
-.footer-contact-column a:hover,
-.footer-legal-links a:hover {
-    color: var(--color-secondary);
-}
+
 
 .footer-copyright-row {
     display: grid;
@@ -456,15 +449,10 @@ a {
     gap: 18px;
 }
 
-.footer-legal-links a {
-    font-size: 0.9rem;
-    color: var(--color-border);
-}
+
 
 @media (max-width: 1024px) {
-    .site-footer {
-        padding: 58px 0 22px;
-    }
+    
 
     .footer-main-grid {
         grid-template-columns: 1fr 1fr;
@@ -511,7 +499,7 @@ a {
 
 .hero-description {
     margin: 28px 0 0;
-    max-width: 62ch;
+    max-width: 42ch;
     font-size: 1.05rem;
     line-height: 1.8;
     color: var(--color-text-muted);
@@ -664,6 +652,138 @@ a {
     margin: 34px 0 28px;
     background-color: var(--color-border);
 }
+
+
+/* Experience Section */
+
+
+.experience-intro {
+    padding-bottom: 36px;
+}
+
+.experience-cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+}
+
+.experience-card {
+    position: relative;
+    min-height: 660px;
+    display: flex;
+    align-items: flex-end;
+    padding: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.experience-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 18, 28, 0.12) 0%, rgba(11, 18, 28, 0.58) 100%);
+}
+
+.experience-card-content {
+    position: relative;
+    z-index: 1;
+    max-width: 320px;
+    color: #ffffff;
+}
+
+.experience-card-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.experience-card-content p {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.experience-card-sea {
+    background-image: url("media/bebop-restaurant-sushi.webp");
+}
+
+.experience-card-sunset {
+    background-image: url("media/bebop-restaurant-cocktail-making.webp");
+}
+
+.experience-card-craft {
+    background-image: url("media/bebop-restaurant-sunset.webp");
+}
+
+@media (max-width: 1024px) {
+    .the-experience {
+        padding-top: 68px;
+    }
+
+    .experience-cards-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .experience-card {
+        
+         background-size: fit;
+    }
+}
+
+
+/*Sounds section */
+
+.the-sounds-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .the-sounds-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.the-sounds-image img {
+    position: relative;
+    padding: 20%;
+    border-radius:50%;
+}
+
+.the-sounds-content {
+    position: relative;
+    z-index: 1;
+    padding:10%;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+
+/* The Place */
+
+.the-place {
+    background-image: url("media/bebop-joomla-paroikia-sunset.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 640px;
+  
+}
+
+
+
+
 
 
 
@@ -1037,8 +1157,8 @@ a {
     }
 
 
-    span .zandros {
-        color: var(--color-secondary);
+    span .eight {
+        color: white;
         font-weight: 700;
         font-size: 1.1rem;
     }
