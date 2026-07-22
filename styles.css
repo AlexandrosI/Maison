@@ -107,35 +107,30 @@ a {
 .button {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 54px;
-    padding: 0 24px;
-    border: 1px solid transparent;
-    border-radius: 3px;
+    padding: 18px 0px 18px 0px;
+    border-bottom: 1px solid var(--color-text);
+   
     font-size: 0.97rem;
     font-weight: 700;
-    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
+      transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
+
 }
 
-.button:hover,
-.button:focus-visible {
-    transform: translateY(-2px);
-}
 
-.button:focus-visible {
-    outline: 3px solid rgba(124, 196, 238, 0.45);
-    outline-offset: 2px;
-}
 
 .button-primary {
    color: var(--color-primary);
+       transition: padding-right 1.0s ease; /* speed */
     
 } 
-
-.button-primary:hover,
-.button-primary:focus-visible {
-    box-shadow: 0 24px 34px rgba(36, 35, 80, 0.22);
+.button-primary:hover {
+    padding-right:25px;
+    
 }
+
+
 
 .button-secondary {
     border-color: var(--color-border);
@@ -487,8 +482,32 @@ a {
 /* Home Hero Section */
 
 .hero-section {
-    padding: 56px 0 88px;
-    background: var(--color-background);
+    padding: 10% 0px;
+    background:
+        linear-gradient(
+            rgba(252, 246, 236, 0.68),
+            rgba(252, 246, 236, 0.43)
+        ),
+        url("media/hero.webp");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#home.hero-section.hero-zoom-active {
+    animation: hero-background-breath 18s ease-in-out infinite;
+}
+
+@keyframes hero-background-breath {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 106%;
+    }
+    100% {
+        background-size: 100%;
+    }
 }
 
 
@@ -500,7 +519,8 @@ a {
 .hero-description {
     margin: 28px 0 0;
     max-width: 42ch;
-    font-size: 1.05rem;
+    font-size: 1.35rem;
+    font-weight:500;
     line-height: 1.8;
     color: var(--color-text-muted);
 }
@@ -640,7 +660,7 @@ a {
 }
 
 .about-description {
-    margin: 24px 0 0;
+    margin: 24px 0px ;
     font-size: 1.03rem;
     line-height: 1.85;
     color: var(--color-text-muted);
@@ -685,6 +705,10 @@ a {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(11, 18, 28, 0.12) 0%, rgba(11, 18, 28, 0.58) 100%);
+}
+
+.experience-card .h2-section-title {
+    color: #ffffff;
 }
 
 .experience-card-content {
@@ -758,6 +782,25 @@ a {
     position: relative;
     padding: 20%;
     border-radius:50%;
+}
+
+.sounds-spin-on-view {
+    transform: rotate(0deg);
+    transform-origin: center;
+    will-change: transform;
+}
+
+.sounds-spin-on-view.sounds-spin-active {
+    animation: sounds-spin-once 15s linear 1;
+}
+
+@keyframes sounds-spin-once {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .the-sounds-content {
@@ -840,7 +883,7 @@ a {
 
 @media (max-width: 1024px) {
     .hero-section {
-        padding: 36px 0 72px;
+        padding: 15% 5%;
     }
 
     .hero-grid {
@@ -882,6 +925,10 @@ a {
 @media (max-width: 640px) {
     :root {
         --container-width: min(100% - 44px, 1180px);
+    }
+
+    .hero-section {
+        padding: 15% 2%;
     }
 
     .hero-actions {

@@ -83,3 +83,71 @@ function initLanguageSwitcher(retriesLeft) {
     switcher.style.cursor = 'pointer';
     switcher.style.color = '#0d5eaf'; // Your brand blue
 }
+
+// Hero Zoom Observer
+
+function initHeroZoomObserver() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
+
+    var hero = document.getElementById('home');
+
+    if (!hero || !hero.classList.contains('hero-section')) {
+        return;
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
+                hero.classList.add('hero-zoom-active');
+            } else {
+                hero.classList.remove('hero-zoom-active');
+            }
+        });
+    }, {
+        threshold: [0.2, 0.35, 0.6]
+    });
+
+    observer.observe(hero);
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeroZoomObserver);
+} else {
+    initHeroZoomObserver();
+}
+
+// Sounds Spin Observer
+
+function initSoundsSpinObserver() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
+
+    var soundDisc = document.querySelector('.sounds-spin-on-view');
+
+    if (!soundDisc) {
+        return;
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.45) {
+                soundDisc.classList.add('sounds-spin-active');
+            } else {
+                soundDisc.classList.remove('sounds-spin-active');
+            }
+        });
+    }, {
+        threshold: [0.2, 0.45, 0.7]
+    });
+
+    observer.observe(soundDisc);
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSoundsSpinObserver);
+} else {
+    initSoundsSpinObserver();
+}
