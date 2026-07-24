@@ -22,14 +22,14 @@ Sections
     --color-secondary-background: #FCF6EC;
     --color-border: #EAE7E3;
     --color-surface: #ffffff;
-    --color-text: #0F1216;
+    --color-text: #5e564f;
     --color-text-muted: #565759;
     --color-shadow: rgba(36, 35, 80, 0.12);
     --color-sunset:#FBCF92;
     --font-body: "Manrope", ui-sans-serif, sans-serif;
     --font-section-heading: "Manrope", "Segoe UI", sans-serif;
     --font-section-title: "Cormorant Garamond", "Times New Roman", serif;
-    --container-width: min(70%, calc(100% - 80px));
+    --container-width: min(85%, calc(100% - 180px));
 }
 
 * {
@@ -63,6 +63,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    line-height:1.6;
+}
+
 .row-container {
     width: var(--container-width);
     margin: 0 auto;
@@ -77,7 +81,7 @@ a {
     align-items: center;
     gap: 12px;
     margin: 0 0 18px;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -879,36 +883,16 @@ a {
 
 
 .hero-section#location-hero {
-  
-    padding: 10% 0px 10% 0px;
-    background:  
-        linear-gradient(rgba(252, 246, 236, 0.43),
-            rgba(252, 246, 236, 0.68)
-            
-        ),url("media/parikia-town.webp");
-    
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
-    background-size: 100% 100%, 110%;
-  
+    background-image:
+        linear-gradient(rgba(252, 246, 236, 0.43), rgba(252, 246, 236, 0.68)),
+        url("media/parikia-town.webp");
+        min-height: 640px;
 
 }
 
 
 #location-hero.hero-section.hero-zoom-active {
-    animation: hero-background-island 18s ease-in-out infinite;
-}
-
-@keyframes hero-background-island {
-    0% {
-        background-size: 100% 100%, 110%;
-    }
-    50% {
-        background-size: 100% 100%, 116%;
-    }
-    100% {
-        background-size: 100% 100%, 110%;
-    }
+    animation: hero-background-breath 18s ease-in-out infinite;
 }
 
 
@@ -940,6 +924,10 @@ a {
 
 @media (max-width: 1024px) {
 
+    #location-hero.hero-section.hero-zoom-active {
+        animation: hero-background-breath-mobile 18s ease-in-out infinite;
+    }
+
 
     .island-container {
         flex-direction: column;
@@ -947,13 +935,75 @@ a {
 }
 
 
- .three-columns .row-container {
+ .three-columns  {
     display:grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 5% 5%;
+
 }
+
+@media (max-width: 1024px) {
+    .three-columns {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+}
+
 .column {  
-    padding:10% 10%;
+    padding:10% 5%;
  }
+
+ .column .h3-section-title {
+    
+    margin: 0 0 18px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--font-section-title);
+    color: var(--color-primary);
+    letter-spacing:0.5px;
+ }
+
+ .find-us-container {
+    display:flex;
+    gap: 4vw;
+ }
+
+ @media (max-width: 1024px) {
+    .find-us-container {
+        flex-direction: column;
+    }
+}
+
+ .info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+ 
+}
+
+  
+
+.info-left {
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom:7%;
+  padding-top:6%;
+  font-size: 0.7rem;
+  font-weight:500;
+   letter-spacing: 0.3em;
+   color: var(--color-text);
+}
+
+.info-right {
+  text-align: right;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+    padding-bottom:7%;
+     padding-top:4%;
+     color:var(--color-primary);
+     letter-spacing: 0em;
+     
+}
 
 
 
