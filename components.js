@@ -86,12 +86,12 @@ function initLanguageSwitcher(retriesLeft) {
 
 // Hero Zoom Observer
 
-function initHeroZoomObserver() {
+function observeHeroZoom(heroId) {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         return;
     }
 
-    var hero = document.getElementById('home');
+    var hero = document.getElementById(heroId);
 
     if (!hero || !hero.classList.contains('hero-section')) {
         return;
@@ -110,6 +110,11 @@ function initHeroZoomObserver() {
     });
 
     observer.observe(hero);
+}
+
+function initHeroZoomObserver() {
+    observeHeroZoom('home');
+    observeHeroZoom('location-hero');
 }
 
 if (document.readyState === 'loading') {

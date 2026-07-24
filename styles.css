@@ -86,6 +86,16 @@ a {
 }
 
 
+.h3-section-title {
+    margin: 0 0 18px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    font-family: var(--font-section-heading);
+    color: var(--color-primary);
+}
+
+
 
 .p-hero-section-title {
     margin: 0;
@@ -525,9 +535,7 @@ a {
 
 }
 
-.hero-section:not(#home) {
-    background: var(--color-secondary-background);
-}
+
 
 
 
@@ -869,8 +877,10 @@ a {
 
 /* THE LOCATION PAGE */
 
-.location-image {
-    padding: 20% 0px;
+
+.hero-section#location-hero {
+  
+    padding: 10% 0px 10% 0px;
     background:  
         linear-gradient(rgba(252, 246, 236, 0.43),
             rgba(252, 246, 236, 0.68)
@@ -879,9 +889,73 @@ a {
     
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
-    background-size: cover;
+    background-size: 100% 100%, 110%;
+  
 
 }
+
+
+#location-hero.hero-section.hero-zoom-active {
+    animation: hero-background-island 18s ease-in-out infinite;
+}
+
+@keyframes hero-background-island {
+    0% {
+        background-size: 100% 100%, 110%;
+    }
+    50% {
+        background-size: 100% 100%, 116%;
+    }
+    100% {
+        background-size: 100% 100%, 110%;
+    }
+}
+
+
+.island-section {
+    padding: 15vh 0;
+    background-color: var(--color-surface);
+}
+
+.island-container {
+    display: flex;
+    gap: 5vw;
+    
+}
+
+
+.island-copy  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:1.2;
+}
+
+.island-visual {
+    flex:1;
+   
+}
+
+
+
+@media (max-width: 1024px) {
+
+
+    .island-container {
+        flex-direction: column;
+    }
+}
+
+
+ .three-columns .row-container {
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.column {  
+    padding:10% 10%;
+ }
+
+
 
 
 
