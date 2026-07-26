@@ -1203,12 +1203,53 @@ font-size: 0.8rem;
     
 }
 
+@media (max-width: 1024px) {
+    #ingredients-row {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+}
+
+
+
+.ingredients-info-column {
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
 .ingredients-visual-column {
     display:grid;
     grid-template-columns: 1fr 1fr;
    
 }
 
+
+
+.ingredients-image1 {
+    width:300px;
+    height:400px;
+    overflow:hidden;
+    object-fit:cover;
+    object-position:center;
+}
+
+.ingredients-image2 {
+    width:300px;
+    height:400px;
+    overflow:hidden;
+    object-fit:cover;
+    object-position:center;
+    margin-top:40px;
+}
+
+
+
+.cocktails-section {
+    
+    background-color: var(--color-background);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
 
 #cocktails-row {
   display:grid;
@@ -1222,8 +1263,56 @@ font-size: 0.8rem;
 .cocktails-visual-column {
     display:grid;
     grid-template-columns: 1fr 1fr;
+    margin-top:auto;
+    margin-bottom:auto;
    
 }
+
+@media (max-width: 1024px) {
+    #cocktails-row {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    #cocktails-row .cocktails-info-column {
+        order: 1;
+    }
+
+    #cocktails-row .cocktails-visual-column {
+        order: 2;
+    }
+}
+
+.cocktails-image1 {
+    width:300px;
+    height:400px;
+    overflow:hidden;
+    object-fit:cover;
+    object-position:center;
+    margin-top:40px;
+}
+.cocktails-image2 {
+    width:300px;
+    height:400px;
+    overflow:hidden;
+    object-fit:cover;
+    object-position:center;
+    
+}
+
+
+.ingredients-cta-row {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
+    padding:5% 0;
+  
+
+}
+   
+
 
 
 
