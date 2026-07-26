@@ -601,11 +601,9 @@ p {
   
     background-size: 100% 100%, 110%;
     background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
+    background-position: center;
 
 }
-
-
 
 
 
@@ -937,6 +935,15 @@ p {
 
 }
 
+
+
+/*GLOBAL INNER HERO SECTIONS STYLES */
+
+#inner-hero.hero-section.hero-zoom-active {
+    animation: hero-background-breath 18s ease-in-out infinite;
+}
+
+
 @keyframes hero-background-breath-mobile {
     0% {
         background-size: 100% 100%, 130% 130%;
@@ -951,21 +958,46 @@ p {
 
 
 
+.hero-section#inner-hero {
+    
+        height: 90vh;
+     
+}
+
+@media (min-width: 1921px) {
+    .hero-section#inner-hero {
+       height: 60vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-section#inner-hero {
+       height: 60vh;
+    }
+
+     #inner-hero.hero-section.hero-zoom-active {
+        animation: hero-background-breath-mobile 18s ease-in-out infinite;
+    }
+
+    
+}
+
+
+
 /* THE LOCATION PAGE */
 
 
-.hero-section#location-hero {
-    background-image:
-        linear-gradient(rgba(252, 246, 236, 0.43), rgba(252, 246, 236, 0.68)),
-        url("media/parikia-town.webp");
-        min-height: 640px;
-
+.location-hero {
+  
+  background:  
+        linear-gradient(rgba(252, 246, 236, 0.43),
+            rgba(252, 246, 236, 0.68)
+            
+        ),url("media/parikia-town.webp");
+  
+  
 }
 
-
-#location-hero.hero-section.hero-zoom-active {
-    animation: hero-background-breath 18s ease-in-out infinite;
-}
 
 
 .island-section {
@@ -996,9 +1028,7 @@ p {
 
 @media (max-width: 1024px) {
 
-    #location-hero.hero-section.hero-zoom-active {
-        animation: hero-background-breath-mobile 18s ease-in-out infinite;
-    }
+  
 
 
     .island-container {
@@ -1133,6 +1163,67 @@ font-size: 0.8rem;
   }
 }
 
+
+
+/* THE INGREDIENTS PAGE */
+
+
+.ingredients-hero {
+  
+  background:  
+       url("media/bebop-joomla-ingredients-hero.webp");
+        background-size:cover;
+  
+  
+}
+
+.ingredients-hero-title{
+    background: linear-gradient(rgba(252, 246, 236, 0.23),
+            rgba(252, 246, 236, 0.48)
+            
+        );
+
+
+        margin-top:250px;
+}
+
+@media (max-width: 1024px) {
+    .ingredients-hero {
+        background-position: center;
+      
+    }
+}
+
+#ingredients-row {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    padding:5% 0;
+    
+    
+}
+
+.ingredients-visual-column {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+
+
+#cocktails-row {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    padding:5% 0;
+    
+    
+}
+
+.cocktails-visual-column {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
 
 
 
