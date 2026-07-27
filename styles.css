@@ -1489,6 +1489,13 @@ font-size: 0.8rem;
     margin-bottom:4vh;
 }
 
+.bebop-architecture {
+    padding: 5vh 0;
+    background-color: var(--color-background);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
 .architecture-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1500,6 +1507,7 @@ font-size: 0.8rem;
     .architecture-grid {
         grid-template-columns: 1fr;
         gap: 34px;
+        padding: 5vh 0;
     }
 }
 
@@ -1512,6 +1520,96 @@ font-size: 0.8rem;
     max-width: 62ch;
     
 }
+
+.bebop-inside {
+  padding: 5vh 0;  
+    
+}
+
+.inside-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 768px) {
+    .inside-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+}
+
+.inside-info {
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.inside-column-grid {
+    padding-top:5vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+@media (max-width: 768px) {
+    .inside-column-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+}
+
+.sunset-image {
+    margin-top:5vh;
+   
+    background: url(media/bebop-joomla-couple-sunset.jpg);
+    background-size: cover;
+    background-position: center;
+    height:800px;
+ 
+}
+
+@media (max-width: 1024px) {
+    .sunset-image {
+        height: 400px;
+    }
+}
+
+.reservations-container {
+    background-color: var(--color-background);
+    border-top: 1px solid var(--color-border);
+}
+
+.reservations-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    padding: 10vh 0;
+}
+
+@media (max-width: 1024px) {
+    .reservations-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+}
+
+.cta-buttons {
+    display:flex;
+    justify-content:right;
+    align-items:center;
+}
+
+@media (max-width: 1024px) {
+    .cta-buttons {
+        justify-content:center;
+    }
+}
+
+.cta-buttons a {
+   font-size:0.8rem !important ;
+  
+}
+
+
+
 
 
 
