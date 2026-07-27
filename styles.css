@@ -1616,13 +1616,40 @@ linear-gradient(45deg,
 /* THE PLACE PAGE */
 
 
+
+
+
+
 .restaurant-hero {
-  padding:10% 0 5vh 0;
-  background:  
-        linear-gradient(rgba(252, 246, 236, 0.23),
-            rgba(252, 246, 236, 0.48)
-            
-        )
+    position:relative;
+    min-height:80vh;
+  
+  background: 
+linear-gradient(45deg, 
+      rgba(255, 255, 255, 0.9) 30%,
+      rgba(255, 255, 255, 0) 50%,        
+      rgba(255, 255, 255, 0) 70%),        
+    
+       url("media/bebop-joomla-interior.jpg");
+        background-size:cover;
+        background-position: center;
+        
+
+}
+
+
+@media (max-width: 1024px) {
+    .restaurant-hero {
+        min-height: 60vh;
+      
+    }
+}
+
+.restaurant-title {
+    position:absolute;
+    bottom:5%;
+    left:5%;
+    
 }
 
 .the-place-description {
@@ -1631,9 +1658,7 @@ linear-gradient(45deg,
 
 }
 
-.the-place-hero-image {
-    margin-bottom:4vh;
-}
+
 
 .bebop-architecture {
     padding: 5vh 0;
@@ -1668,7 +1693,7 @@ linear-gradient(45deg,
 }
 
 .bebop-inside {
-  padding: 5vh 0;  
+  padding: 10vh 0;
     
 }
 
@@ -1676,6 +1701,7 @@ linear-gradient(45deg,
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 1vw;
+    margin-bottom:50px;
 }
 @media (max-width: 768px) {
     .inside-grid {
