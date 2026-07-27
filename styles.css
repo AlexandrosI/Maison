@@ -214,8 +214,11 @@ p {
 /* Header */
 
 .site-header {
-    position: sticky;
-    top: 0;
+    position: fixed;
+     top: 0;
+    left: 0;
+    right: 0;           /* ★ Ensures full viewport width */
+    width: 100%; 
     z-index: 30;
     padding: 14px 0;
     background-color: white;
