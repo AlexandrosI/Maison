@@ -117,6 +117,8 @@ p {
 
 
 
+
+
 .p-hero-section-title {
     margin: 0;
     font-family: var(--font-section-title);
@@ -1100,6 +1102,14 @@ p {
     padding:10% 5%;
  }
 
+ .three-columns-image {
+
+    width:100%;
+   margin-bottom:30px;
+  
+    
+ }
+
  .column .h3-section-title {
     
     margin: 0 0 18px;
@@ -1109,6 +1119,12 @@ p {
     color: var(--color-primary);
     letter-spacing:0.5px;
  }
+
+ @media (max-width: 1024px) {
+    .column .h3-section-title {
+        font-size: 2.5rem;
+    }
+}
 
 .find-us-section {
     padding:12vh 0;
@@ -1133,6 +1149,12 @@ p {
  
 }
 
+.find-us-visual {
+  margin-top:auto;
+  margin-bottom:auto;
+  
+}
+
 @media (max-width: 1024px) {
   .find-us-visual {
   padding-bottom:40px;
@@ -1146,6 +1168,12 @@ p {
 .find-us-info {
   margin-top:auto;
   margin-bottom:auto;
+}
+
+@media (max-width: 1919px) {
+  .find-us-title {
+  font-size: 2.2rem;
+  }
 }
   
 
@@ -1167,9 +1195,21 @@ font-size: 0.8rem;
     padding-top:6%;
      color:var(--color-primary);
      letter-spacing: 0em;
-     font-size: 1.0rem;
+     font-size: 1.2rem;
      
      
+}
+
+
+@media (min-width: 1025px) and (max-width: 1919px) {
+  .info-left {
+   font-size: 0.7rem;
+  }
+  
+  .info-right {
+   
+       font-size: 0.8rem;    
+  }
 }
 
 @media (min-width: 1921px) {
@@ -1211,23 +1251,30 @@ font-size: 0.8rem;
 
 
 .ingredients-hero {
+    position:relative;
+    min-height:80vh;
   
-  background:  
+  background: 
+linear-gradient(45deg, 
+      rgba(255, 255, 255, 0.9) 30%,
+      rgba(255, 255, 255, 0) 50%,        
+      rgba(255, 255, 255, 0) 70%),        
+    
        url("media/bebop-joomla-ingredients-hero.webp");
         background-size:cover;
-  
-  
+        background-position: center;
+        
+
 }
 
-.ingredients-hero-title{
-    background: linear-gradient(rgba(252, 246, 236, 0.23),
-            rgba(252, 246, 236, 0.48)
-            
-        );
-
-
-        margin-top:250px;
+.ingredients-hero-title {
+    position:absolute;
+    bottom:5%;
+    left:5%;
+    
 }
+
+
 
 @media (max-width: 1024px) {
     .ingredients-hero {
@@ -1529,6 +1576,7 @@ font-size: 0.8rem;
 .inside-grid {
     display:grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1vw;
 }
 @media (max-width: 768px) {
     .inside-grid {
