@@ -1,3 +1,33 @@
+// FACE TITLES ON SCROLL
+
+
+// Remove DOMContentLoaded wrapper
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.fade-on-scroll').forEach(el => {
+  observer.observe(el);
+});
+
+
+
+
+
+
+
+
 // 1. Define loadComponent (Your existing function, kept as is)
 function loadComponent(url, placeholderId, lang) {
     var finalUrl = lang ? '/' + lang + url : url;

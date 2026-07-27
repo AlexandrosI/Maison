@@ -737,6 +737,17 @@ linear-gradient(45deg,
     gap: 60px;
 }
 
+.fade-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-on-scroll.is-visible {
+  opacity: 1;              /* ★ Fade in */
+  transform: translateY(0);  /* ★ Slide back to original position */
+}
+
 .about-visual {
     position: relative;
     padding: 0 22px 22px 0;
@@ -1575,6 +1586,30 @@ linear-gradient(45deg,
         grid-template-columns: 1fr;
         gap: 34px;
     }
+}
+
+.floating-image  {
+     animation: float 3s ease-in-out infinite;
+}
+
+.floating-image2 {
+     animation: float 4s ease-in-out infinite;
+}
+
+.floating-image3 {
+     animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 
