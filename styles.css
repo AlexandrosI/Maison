@@ -31,7 +31,7 @@ Sections
     --font-body: "Manrope", ui-sans-serif, sans-serif;
     --font-section-heading: "Manrope", "Segoe UI", sans-serif;
     --font-section-title: "Cormorant Garamond", "Times New Roman", serif;
-    --container-width: min(85%, calc(100% - 180px));
+    --container-width: min(80%, calc(100% - 180px));
 }
 
 * {
@@ -307,25 +307,32 @@ p {
 .lang-switcher {
     display: inline-flex;
     align-items: center;
-    font-weight: bold;
-    color: var(--color-primary, #0d5eaf);
+    gap: 6px;
+    font-weight: 500;
+    color: var(--color-primary);
     padding: 8px 12px;
     border-radius: 4px;
     transition: background 0.2s;
-    text-decoration: none;
-    cursor: pointer;
+    letter-spacing: 0.12em;
 }
 
 .lang-switcher:hover {
     background-color: rgba(13, 94, 175, 0.1);
 }
 
-.lang-switcher img {
-    height: 18px;
-    width: auto;
-    vertical-align: middle;
-    margin-right: 6px;
-    display: inline-block;
+.lang-switcher a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    letter-spacing: 0.12em;
+}
+
+.lang-switcher a.is-active {
+    font-weight: 800;
+}
+
+.lang-switcher span {
+    color: var(--color-primary);
 }
 
 
@@ -472,6 +479,41 @@ p {
     font-size: 0.95rem;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.86);
+}
+
+.footer-social-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-social-row a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 50%;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.footer-social-row a:hover,
+.footer-social-row a:focus-visible {
+    background-color: rgba(255, 255, 255, 0.14);
+    transform: translateY(-1px);
+}
+
+.footer-social-row i {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.footer-social-row .fa-tripadvisor::before {
+    content: "\f262";
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
 }
 
 
@@ -1422,6 +1464,53 @@ font-size: 0.8rem;
         grid-template-columns: 1fr;
         gap: 34px;
     }
+}
+
+
+/* THE PLACE PAGE */
+
+
+.restaurant-hero {
+  padding:10% 0 5vh 0;
+  background:  
+        linear-gradient(rgba(252, 246, 236, 0.23),
+            rgba(252, 246, 236, 0.48)
+            
+        )
+}
+
+.the-place-description {
+    max-width:62ch;
+    margin-bottom:8vh;
+
+}
+
+.the-place-hero-image {
+    margin-bottom:4vh;
+}
+
+.architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2vw;
+    padding: 10vh 0;
+}
+
+@media (max-width: 1024px) {
+    .architecture-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+}
+
+.architecture-title {
+    font-size: clamp(2.85rem, 3.5vw, 3.6rem);
+}
+
+.p-section-description {
+  
+    max-width: 62ch;
+    
 }
 
 

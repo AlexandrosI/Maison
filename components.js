@@ -43,7 +43,7 @@ function loadComponent(url, placeholderId, lang) {
 function initLanguageSwitcher(retriesLeft) {
     retriesLeft = retriesLeft || 5; // Default 5 retries
     
-    var switcher = document.getElementById('lang-switcher');
+    var switcher = document.querySelector('.lang-switcher');
     
     if (!switcher) {
         if (retriesLeft > 0) {
@@ -57,31 +57,46 @@ function initLanguageSwitcher(retriesLeft) {
         return;
     }
 
-    console.log("Switcher found! Setting up redirect logic.");
+    console.log("Switcher found! Setting up EN/GR links.");
+
+    var englishLink = switcher.querySelector('a[data-lang="en"]');
+    var greekLink = switcher.querySelector('a[data-lang="gr"]');
+
+    if (!englishLink || !greekLink) {
+        console.error("ERROR: Language links are missing in .lang-switcher.");
+        return;
+    }
 
     // Detect Language
     var path = window.location.pathname;
     var isGreek = path.indexOf('/gr/') !== -1 || path.indexOf('/gr') === 0;
     
-    // Calculate Target
-    var currentPath = path.replace(/^\/gr\//, '/').replace(/^\/gr$/, '/');
-    var targetPath = isGreek ? currentPath : (currentPath === '/' || currentPath === '' ? '/gr/' : '/gr' + currentPath);
+    // Build equivalent EN and GR paths for the current page.
+    var englishPath = path.replace(/^\/gr(?=\/|$)/, '');
+    if (englishPath === '') {
+        englishPath = '/';
+    }
+    var greekPath = englishPath === '/' ? '/gr/' : '/gr' + englishPath;
 
     // Debug Log
     console.log("Current Path:", path);
     console.log("Is Greek:", isGreek);
-    console.log("Target Path:", targetPath);
+    console.log("English Path:", englishPath);
+    console.log("Greek Path:", greekPath);
 
-    // Set Click Event
-    switcher.onclick = function(e) {
-        e.preventDefault();
-        console.log("Redirecting to: " + targetPath);
-        window.location.href = targetPath;
-    };
-    
-    // Optional: Add hover style via JS if CSS isn't working
-    switcher.style.cursor = 'pointer';
-    switcher.style.color = '#0d5eaf'; // Your brand blue
+    englishLink.href = englishPath;
+    greekLink.href = greekPath;
+
+    englishLink.classList.remove('is-active');
+    greekLink.classList.remove('is-active');
+
+    if (isGreek) {
+        greekLink.classList.add('is-active');
+    } else {
+        englishLink.classList.add('is-active');
+    }
+
+    switcher.style.cursor = 'default';
 }
 
 // Hero Zoom Observer
