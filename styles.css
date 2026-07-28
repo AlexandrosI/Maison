@@ -324,7 +324,7 @@ p {
 }
 
 .lang-switcher a:hover {
-    font-size: 20px;
+    font-size: 0px;
     cursor:pointer;
     color: var(--color-primary);
     
@@ -341,14 +341,23 @@ font-size:20px;
     font-weight: 500;
     color: var(--color-primary);
     letter-spacing: 0.12em;
+   
 }
 
 .lang-switcher a.is-active {
     font-weight: 800;
+    
 }
 
 .lang-switcher span {
     color: var(--color-primary);
+    
+}
+
+@media (max-width: 1024px) {
+    .lang-switcher span {
+        padding-bottom:10px;
+    }
 }
 
 
@@ -652,7 +661,7 @@ font-size:20px;
 .hero-section {
   
        position:relative;
-    min-height:80vh;
+    min-height:90vh;
   
   background: 
 linear-gradient(45deg, 
@@ -663,7 +672,7 @@ linear-gradient(45deg,
        url("media/hero.webp");
         background-size:cover;
     
-    background-size: 100% 100%, 110%;
+    
     background-position: center;
 
 }
@@ -885,6 +894,7 @@ linear-gradient(45deg,
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0;
     width: 100%;
+   
 }
 
 @media (max-width: 1024px) {
@@ -893,16 +903,23 @@ linear-gradient(45deg,
     }
 }
 
+.the-sounds-image {
+    overflow: hidden;  /* Constrain children */
+    position: relative;
+    min-height: 0;
+    padding-top:10vh;
+   
+}
+
 
 .the-sounds-image img {
-    position: relative;
-    padding: 20%;
-    border-radius:50%;
+padding:20%; 
+ border-radius: 50%;box-sizing: border-box;  /* Important: includes padding in dimensions */
 }
 
 .sounds-spin-on-view {
     transform: rotate(0deg);
-    transform-origin: center;
+    transform-origin: center center;
     will-change: transform;
 }
 
