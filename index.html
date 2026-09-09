@@ -12,7 +12,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
    
 </head>
@@ -21,24 +21,79 @@
         <div id="site-header-placeholder"></div>
 
         <main>
-            <section class="hero-section" id="home">
-                <div class="row-container home-hero-title">
-                    <div class="hero-copy">
-                        <h1 class="h2-section-title">Petrothalassa,Kea, Greece</h1>
-                        <p class="p-hero-section-title">La Maison Vert Amande </p>
-                        <p class="hero-description">where nature meets sophistication.
-Enjoy an unforgettable experience. </p>
-                        <div class="hero-actions">
-                            <a class="button button-primary" href="the-restaurant.html">STEP INSIDE</a>
-                            
+            <section class="hero-section hero-slider" id="home" aria-label="La Maison hero slider">
+                <article class="hero-slide is-active" data-slide-index="0" aria-hidden="false" style="--hero-slide-image: url('media/la-maison-hero-1.webp');">
+                    <div class="row-container hero-slide-content">
+                        <div class="hero-copy">
+                            <p class="h2-section-title hero-slide-meta">Petrothalassa · Ermionida · Greece</p>
+                            <h1 class="p-section-title hero-slide-title"># La Maison Vert Amande</h1>
+                            <p class="hero-slide-description">A secluded Cycladic stay where sea breeze, olive trees, and soft light set the rhythm of your mornings.</p>
+                            <a class="button button-primary hero-slide-cta" href="mailto:e.bebop.paros@gmail.com?subject=Request%20your%20stay">request your stay</a>
                         </div>
-                       
                     </div>
-                   
+                </article>
+
+                <article class="hero-slide" data-slide-index="1" aria-hidden="true" style="--hero-slide-image: url('media/la-maison-hero-2.webp');">
+                    <div class="row-container hero-slide-content">
+                        <div class="hero-copy">
+                            <p class="h2-section-title hero-slide-meta">Petrothalassa · Ermionida · Greece</p>
+                            <h1 class="p-section-title hero-slide-title"># La Maison Vert Amande</h1>
+                            <p class="hero-slide-description">Wake up to panoramic Aegean views, unwind on your private terrace, and let each day unfold at its own pace.</p>
+                            <a class="button button-primary hero-slide-cta" href="mailto:e.bebop.paros@gmail.com?subject=Request%20your%20stay">request your stay</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-slide-index="2" aria-hidden="true" style="--hero-slide-image: url('media/la-maison-hero-3.webp');">
+                    <div class="row-container hero-slide-content">
+                        <div class="hero-copy">
+                            <p class="h2-section-title hero-slide-meta">Petrothalassa · Ermionida · Greece</p>
+                            <h1 class="p-section-title hero-slide-title"># La Maison Vert Amande</h1>
+                            <p class="hero-slide-description">From sunrise coffee to golden-hour stillness, every detail is shaped for comfort, warmth, and quiet elegance.</p>
+                            <a class="button button-primary hero-slide-cta" href="mailto:e.bebop.paros@gmail.com?subject=Request%20your%20stay">request your stay</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-slide-index="3" aria-hidden="true" style="--hero-slide-image: url('media/la-maison-hero-4.webp');">
+                    <div class="row-container hero-slide-content">
+                        <div class="hero-copy">
+                            <p class="h2-section-title hero-slide-meta">Petrothalassa · Ermionida · Greece</p>
+                            <h1 class="p-section-title hero-slide-title"># La Maison Vert Amande</h1>
+                            <p class="hero-slide-description">Close to hidden coves and timeless villages, this is your calm base for unforgettable days by the sea.</p>
+                            <a class="button button-primary hero-slide-cta" href="mailto:e.bebop.paros@gmail.com?subject=Request%20your%20stay">request your stay</a>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="hero-slider-nav" aria-label="Slider arrows">
+                    <button class="hero-slider-arrow hero-slider-arrow-prev" type="button" aria-label="Previous slide">
+                        <span aria-hidden="true">&#8592;</span>
+                    </button>
+                    <button class="hero-slider-arrow hero-slider-arrow-next" type="button" aria-label="Next slide">
+                        <span aria-hidden="true">&#8594;</span>
+                    </button>
+                </div>
+
+                <div class="hero-slider-pagination" aria-label="Hero slide pagination">
+                    <button class="hero-slider-page is-active" type="button" data-slide-to="0" aria-label="Go to slide 1" aria-current="true"></button>
+                    <button class="hero-slider-page" type="button" data-slide-to="1" aria-label="Go to slide 2"></button>
+                    <button class="hero-slider-page" type="button" data-slide-to="2" aria-label="Go to slide 3"></button>
+                    <button class="hero-slider-page" type="button" data-slide-to="3" aria-label="Go to slide 4"></button>
                 </div>
             </section>
 
-            
+            <section class="welcoming-message">
+                <div class="row-container welcoming-message-grid">
+                
+                        <h2 class="h2-section-title title-center">FILOXENIA</h2>
+                       
+                        <p class="message-description">“A place that reflects its owners: welcoming, warm, refined and authentic. Nothing flashy. A peaceful retreat, far from the legendary hustle and bustle of the islands.”</p>
+                        <div class="small-divider" aria-hidden="true"></div>
+                    </div>
+                    
+                </div>
+            </section>
 
             <section class="about-section " id="about" aria-label="About us">
                 <div class="row-container about-grid">
@@ -46,19 +101,39 @@ Enjoy an unforgettable experience. </p>
                         <img src="media/bebop-joomla-philosophy.webp" alt="View from Bebop Joomla Restaurant window">
                        
                     </div>
-                    <div class="about-content fade-on-scroll">
-                        <h2 class="h2-section-title">Our Philosophy</h2>
-                        <p class="p-section-title">"Discover life at Petrothalassa.</p>
-                          <div class="description-flex">
-                            <p class="about-description">We’ll help you make the most of your unforgettable holiday.
-                            La Maison Vert Amande is a place that reflects its owners: welcoming, warm, refined and authentic. </p>
-                            <p class="about-description">Surrounded by magnificent scenery and fascinating tourist attractions, we’ll always be on hand to help you make the most of your visits. We can also offer advice on getting around the local area. </p>
-                            </div>  
-                        <div class="about-divider" aria-hidden="true"></div>
+                    <div>
+                        <h2 class="h2-section-title">the room</h2>
+                        <p class="p-section-title">One room, entirely yours</p>
+                          <div class="small-divider-left" aria-hidden="true"></div>
+                         
+                            <p class="about-description">Spacious (20 m²) and very bright, with its own private entrance by an external staircase, a genuine king-size bed, a separate private bathroom, and direct access to two very large verandas facing the sea. </p>
+                            <p class="about-description">Tea and coffee are always waiting for you, the Wi-Fi is free, and the only sound at night is the wind through the olive trees.
+
+</p>
+                            
+                    <a class="button button-primary" href="the-restaurant.html">STEP INSIDE</a>
+                        
                       
                     </div>
                 </div>
             </section>
+
+
+            <section class="product-description">
+                <div class="row-container" id="product-row">
+                    <div class="product-info-column fade-on-scroll">
+                        <h2 class="h2-section-title"> From our land</h2>
+                        <p class="p-section-title">Honey, olive oil, marmalade</p>
+                        <div class="small-divider-left" aria-hidden="true"></div>
+                        <p class="p-section-description">George is a third-generation beekeeper — the hives sit around our farm at Petrothalassa. Our olive oil comes exclusively from our own grove, and the marmalades are made by hand, in a copper pot, from fruit picked the same day.</p>
+                        <a class="button button-primary" href="the-restaurant.html">Our products</a>
+                    </div>
+                    <div class="product-visual-column">
+                        <img src="media/bebop-joomla-ingredients-image1.webp" alt="Fresh ingredients used in Bebop x Joomla dishes" loading="lazy" class="ingredients-image1">
+                        <img src="media/bebop-joomla-ingredients-image2.webp" alt="Fresh ingredients used in Bebop x Joomla dishes" loading="lazy" class="ingredients-image2">
+                    </div>
+                    </div>
+                </section>
 
 
               <section class="three-columns">
@@ -84,37 +159,7 @@ Enjoy an unforgettable experience. </p>
                
             </section>
 
-           <!-- <section class="the-experience">
-                 <div class="row-container experience-intro">
-                    
-                        
-                </div>
-
-                <div class="experience-cards-row">
-                    <article class="experience-card experience-card-sea">
-                        <div class="experience-card-content">
-                           <h2 class="h2-section-title">The House</h2>
-                           
-                            <p>Our guesthouse is set in a truly picturesque natural setting, a haven of peace. You’ll love the incredible view of the Aegean Sea from your very large double terrace.</p>
-                        </div>
-                    </article>
-                    <article class="experience-card experience-card-sunset">
-                        <div class="experience-card-content">
-                            <h2 class="h2-section-title">The Bedroom</h2>
-                            
-                            <p>Set in a privileged and peaceful location, the cosy atmosphere of these highly comfortable guest rooms features a private entrance and two very large verandas overlooking the sea, where you can retreat to admire the beautiful sunsets or sunrises</p>
-                        </div>
-                    </article>
-                    <article class="experience-card experience-card-craft">
-                        <div class="experience-card-content">
-                            <h2 class="h2-section-title">The Bathroom</h2>
-                           
-                            <p>Designed with your well-being in mind, your bathroom is private. The décor is unique and stunning. Intimate and light-filled, it gently awakens your senses.</p>
-                        </div>
-                    </article>
-                </div>
-
-           </section> -->
+          
 
            <section class="the-sounds">
 
