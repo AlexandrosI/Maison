@@ -169,7 +169,8 @@ p {
 .button-primary {
    color: var(--color-background);
    background-color: var(--color-primary); 
-      margin-top: 20px ;   
+    margin-top: 20px ;   
+    text-transform: uppercase;
 } 
 
 
@@ -183,9 +184,12 @@ p {
 
 
 .button-secondary {
-    border-color: var(--color-border);
+   
     background-color: transparent;
     color: var(--color-primary);
+    text-transform: uppercase;
+    border: 1px solid rgba(51, 55, 42, 0.12);
+    border-color: color-mix(in srgb, var(--color-secondary) 12%, transparent);
 }
 
 .button-secondary:hover,
@@ -1348,8 +1352,7 @@ linear-gradient(10deg,
     grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 2% 4%;
     background:var(--color-background);
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+   
 
 }
 
@@ -1509,7 +1512,7 @@ font-size: 0.8rem;
 
 
 
-/* THE INGREDIENTS PAGE */
+/* THE PRODUCT SECTION HOMEPAGE */
 
 
 .ingredients-hero {
@@ -1552,11 +1555,17 @@ linear-gradient(45deg,
     }
 }
 
+
+.product-description {
+    background-color: var(--color-background-alt);
+}
+
 #product-row {
   display:grid;
   grid-template-columns: 1fr 1fr;
     gap: 2vw;
     padding:10vh 0;
+    
     
     
 }
