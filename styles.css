@@ -1064,8 +1064,17 @@ linear-gradient(45deg,
     background-color: var(--color-border);
 }
 
+/* Three Columns Section */
 
+.three-columns-div {
+    padding:5% 5% 0 5%;
+}   
 
+.two-buttons-row {
+    
+    display:flex;
+    gap:2%;
+}
 
 /*Sounds section */
 

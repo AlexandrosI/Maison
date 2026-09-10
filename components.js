@@ -57,13 +57,23 @@ function loadComponent(url, placeholderId, lang) {
         });
 }
 
+function getActiveLanguage(path) {
+    var languageMatch = path.match(/^\/(gr|fr)(?=\/|$)/);
+
+    if (languageMatch && languageMatch[1]) {
+        return languageMatch[1];
+    }
+
+    return 'en';
+}
+
 // 3. Auto-load Logic
 (function() {
     var path = window.location.pathname;
-    var isGreek = path.indexOf('/gr/') !== -1 || path.indexOf('/gr') === 0;
-    var langParam = isGreek ? 'gr' : null;
+    var activeLanguage = getActiveLanguage(path);
+    var langParam = activeLanguage === 'en' ? null : activeLanguage;
 
-    console.log("Initializing components. Language detected: " + (isGreek ? "Greek" : "English"));
+    console.log("Initializing components. Language detected: " + activeLanguage.toUpperCase());
     
     loadComponent('/header.html', 'site-header-placeholder', langParam);
     loadComponent('/footer.html', 'site-footer-placeholder', langParam);
@@ -87,41 +97,49 @@ function initLanguageSwitcher(retriesLeft) {
         return;
     }
 
-    console.log("Switcher found! Setting up EN/GR links.");
+    console.log("Switcher found! Setting up EN/GR/FR links.");
 
     var englishLink = switcher.querySelector('a[data-lang="en"]');
     var greekLink = switcher.querySelector('a[data-lang="gr"]');
+    var frenchLink = switcher.querySelector('a[data-lang="fr"]');
 
-    if (!englishLink || !greekLink) {
+    if (!englishLink || !greekLink || !frenchLink) {
         console.error("ERROR: Language links are missing in .lang-switcher.");
         return;
     }
 
-    // Detect Language
+    // Detect active language and build equivalent EN, GR, FR paths.
     var path = window.location.pathname;
-    var isGreek = path.indexOf('/gr/') !== -1 || path.indexOf('/gr') === 0;
-    
-    // Build equivalent EN and GR paths for the current page.
-    var englishPath = path.replace(/^\/gr(?=\/|$)/, '');
-    if (englishPath === '') {
-        englishPath = '/';
+    var activeLanguage = getActiveLanguage(path);
+    var basePath = path.replace(/^\/(gr|fr)(?=\/|$)/, '');
+
+    if (basePath === '') {
+        basePath = '/';
     }
-    var greekPath = englishPath === '/' ? '/gr/' : '/gr' + englishPath;
+
+    var englishPath = basePath;
+    var greekPath = basePath === '/' ? '/gr/' : '/gr' + basePath;
+    var frenchPath = basePath === '/' ? '/fr/' : '/fr' + basePath;
 
     // Debug Log
     console.log("Current Path:", path);
-    console.log("Is Greek:", isGreek);
+    console.log("Active Language:", activeLanguage.toUpperCase());
     console.log("English Path:", englishPath);
     console.log("Greek Path:", greekPath);
+    console.log("French Path:", frenchPath);
 
     englishLink.href = englishPath;
     greekLink.href = greekPath;
+    frenchLink.href = frenchPath;
 
     englishLink.classList.remove('is-active');
     greekLink.classList.remove('is-active');
+    frenchLink.classList.remove('is-active');
 
-    if (isGreek) {
+    if (activeLanguage === 'gr') {
         greekLink.classList.add('is-active');
+    } else if (activeLanguage === 'fr') {
+        frenchLink.classList.add('is-active');
     } else {
         englishLink.classList.add('is-active');
     }
