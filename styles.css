@@ -184,7 +184,7 @@ p {
 
 
 .button-secondary {
-   
+   margin-top: 20px ;  
     background-color: transparent;
     color: var(--color-primary);
     text-transform: uppercase;
@@ -994,7 +994,56 @@ linear-gradient(45deg,
 }
 
 
+#testimonials {
+    padding: 88px 0;
+    background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)), url(/media/la-maison-vert-amande-seating-room.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+    position: relative;
+    min-height:450px;
+}
 
+#testimonials .h2-section-title {
+    color: white;
+}
+
+
+#testimonial-messages {
+    padding: 88px 0;
+    background-color: var(--color-background);
+}
+
+.testimonial-messages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+    
+}
+
+@media (max-width: 767px) {
+    .testimonial-messages-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 16px;
+    }
+}
+
+
+.testimonial-message {
+    border: 1px solid var(--color-border);
+    background-color: #ffffff;
+    padding:5%;
+}
+
+.testimonial-quote {    
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color:var(--color-primary);
+}
 
 
 /* About Section */
@@ -1074,7 +1123,17 @@ linear-gradient(45deg,
     
     display:flex;
     gap:2%;
+    padding-left:5%;
 }
+
+@media (max-width: 600px) {
+    .two-buttons-row {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 5%;
+    }
+}
+
 
 /*Sounds section */
 
