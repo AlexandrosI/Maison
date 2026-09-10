@@ -1,65 +1,64 @@
-
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Επικοινωνία | La Maison Vert Amande</title>
+    <title>Reserve | La Maison Vert Amande</title>
     <meta
         name="description"
-        content="Επικοινωνήστε με το La Maison Vert Amande για κρατήσεις και πληροφορίες διαμονής."
+        content="Contact La Maison Vert Amande to reserve your stay, ask questions, and request availability."
     >
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="#SITE_URL#/gr/contact.html">
+    <link rel="canonical" href="#SITE_URL#/contact.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="La Maison Vert Amande">
-    <meta property="og:title" content="Επικοινωνία | La Maison Vert Amande">
-    <meta property="og:description" content="Επικοινωνήστε με το La Maison Vert Amande για κρατήσεις και πληροφορίες διαμονής.">
-    <meta property="og:url" content="#SITE_URL#/gr/contact.html">
+    <meta property="og:title" content="Reserve | La Maison Vert Amande">
+    <meta property="og:description" content="Contact La Maison Vert Amande to reserve your stay, ask questions, and request availability.">
+    <meta property="og:url" content="#SITE_URL#/contact.html">
     <meta property="og:image" content="#SITE_URL#/media/social/la-maison-vert-amande-contact-social.webp">
-    <meta property="og:image:alt" content="Επικοινωνία για διαμονή στο La Maison Vert Amande">
-    <meta property="og:locale" content="el_GR">
+    <meta property="og:image:alt" content="Reserve your stay at La Maison Vert Amande">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Επικοινωνία | La Maison Vert Amande">
-    <meta name="twitter:description" content="Επικοινωνήστε με το La Maison Vert Amande για κρατήσεις και πληροφορίες διαμονής.">
+    <meta name="twitter:title" content="Reserve | La Maison Vert Amande">
+    <meta name="twitter:description" content="Contact La Maison Vert Amande to reserve your stay, ask questions, and request availability.">
     <meta name="twitter:image" content="#SITE_URL#/media/social/la-maison-vert-amande-contact-social.webp">
-    <link rel="icon" type="image/png" href="../media/logo/bebop-favicon.ico">
+    <link rel="icon" type="image/png" href="media/logo/bebop-favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="page-layout">
         <div id="site-header-placeholder"></div>
 
         <main>
-            <section class="contact-section" aria-label="Section επικοινωνίας">
+            <section class="contact-section" aria-label="Contact form section">
                 <div class="info-col">
                     <div class="contact-visual">
-                        <img class="contact-visual-image" src="../media/la-maison-vert-amande-seating-room.webp" alt="Καθιστικό στο La Maison Vert Amande">
+                        <img class="contact-visual-image" src="media/la-maison-vert-amande-seating-room.webp" alt="La Maison Vert Amande seating area">
                         <aside class="mission-card">
-                            <img class="mission-card-logo" src="../media/logo/bebop-joomla-logo.png" alt="Λογότυπο La Maison Vert Amande">
-                            <p>Μακροχρόνιες συνεργασίες βασισμένες στην εμπιστοσύνη, τη διαφάνεια και μετρήσιμα αποτελέσματα.</p>
+                            <img class="mission-card-logo" src="media/logo/bebop-joomla-logo.png" alt="La Maison Vert Amande logo">
+                            <p>Long-term partnerships built on trust, transparency and measurable outcomes.</p>
                         </aside>
                     </div>
                 </div>
 
                 <div class="form-col">
                     <div class="form-container">
-                        <h1 class="contact-form-title">Στείλτε μας μήνυμα</h1>
-                        <form action="../send-mail.php" method="POST" id="contactForm">
-                            <input type="hidden" name="lang" value="gr">
-                            <input type="hidden" name="redirect" value="gr/contact.html">
+                        <h1 class="contact-form-title">Send us a message</h1>
+                        <form action="send-mail.php" method="POST" id="contactForm">
+                            <input type="hidden" name="lang" value="en">
+                            <input type="hidden" name="redirect" value="contact.html">
 
                             <div class="input-row">
                                 <div class="col-half form-group">
-                                    <label for="name">Όνομα</label>
-                                    <input type="text" id="name" name="name" required placeholder="Το όνομά σας">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Doe">
                                 </div>
                                 <div class="col-half form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required placeholder="Το email σας">
+                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
                                 </div>
                             </div>
 
@@ -86,16 +85,16 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="subject">Θέμα</label>
-                                <input type="text" id="subject" name="subject" required placeholder="Πώς μπορούμε να βοηθήσουμε;">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="How can we help?">
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Μήνυμα</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Πληκτρολογήστε το μήνυμά σας εδώ..."></textarea>
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
                             </div>
 
-                            <button type="submit" id="submitBtn" data-loading-text="Αποστολή...">Αποστολή μηνύματος</button>
+                            <button type="submit" id="submitBtn" data-loading-text="Sending...">Send message</button>
                             <div id="form-message" role="status" aria-live="polite"></div>
                         </form>
                     </div>
@@ -106,7 +105,7 @@
         </main>
     </div>
 
-    <script src="../components.js"></script>
-    <script src="../send-mail.php?asset=form-handler"></script>
+    <script src="components.js"></script>
+    <script src="send-mail.php?asset=form-handler"></script>
 </body>
 </html>

@@ -2,18 +2,26 @@
     
         <header class="site-header" aria-label="Main header">
             <div class="row-container header-inner">
-                <a class="header-logo" href="index.html#home" aria-label="F&amp;A Executive Consultants home">
-                    <img src="/media/logo/FA-logo-blue.png" alt="F&amp;A Executive Consultants logo">
+                <a class="header-logo" href="index.html#home" aria-label="Bebop x Joomla home">
+                    <img src="/media/logo/bebop-joomla-logo.png" alt="Bebop x Joomla logo">
                 </a>
 
                 <input class="header-menu-checkbox" type="checkbox" id="header-menu-toggle-fragment" aria-label="Toggle navigation menu">
                 <label class="header-menu-toggle" for="header-menu-toggle-fragment" aria-hidden="true">
                     <span class="header-menu-line"></span>
-                    <span class="header-menu-text">Menu</span>
+                    <span class="header-menu-line"></span>
                     <span class="header-menu-line"></span>
                 </label>
 
                 <nav class="header-nav" aria-label="Primary navigation">
+                   
+                    <a href="about.html">ABOUT US</a>
+                    <a href="the-house.html">THE HOUSE</a>
+                    <a href="products.html">OUR PRODUCTS</a>
+                    <a href="find.html">HOW TO FIND US</a>
+                    <a href="nearby.html">NEARBY</a>
+                    
+
                     <div class="lang-switcher" aria-label="Language switcher">
                         <a href="/" data-lang="en">EN</a>
                         <span aria-hidden="true">/</span>
@@ -21,15 +29,9 @@
                         <span aria-hidden="true">/</span>
                         <a href="/fr/" data-lang="fr">FR</a>
                     </div>
-                            
-                    <a href="index.html#home">Αρχική</a>
-                    <a href="../the-restaurant.html">Το Εστιατόριο</a>
-                    <a href="../ingredients.html">Συστατικά</a>
-                    <a href="../the-sounds.html">Οι Ήχοι</a>
-                    <a href="../the-location.html">Η Τοποθεσία</a>
                 </nav>
 
-                <a class="header-cta-button" href="contact.html">Επικοινωνία</a>
+                <a class="button button-primary" href="contact.html" onclick="document.getElementById('header-menu-toggle-fragment').checked = false">Reserve</a>
             </div>
         </header>
   

@@ -117,9 +117,27 @@ function initLanguageSwitcher(retriesLeft) {
         basePath = '/';
     }
 
-    var englishPath = basePath;
-    var greekPath = basePath === '/' ? '/gr/' : '/gr' + basePath;
-    var frenchPath = basePath === '/' ? '/fr/' : '/fr' + basePath;
+    var sharedLocalizedPaths = [
+        '/',
+        '/index.html',
+        '/about.html',
+        '/the-house.html',
+        '/products.html',
+        '/find.html',
+        '/nearby.html',
+        '/contact.html'
+    ];
+
+    var hasLocalizedEquivalent = sharedLocalizedPaths.indexOf(basePath) !== -1;
+    var englishPath = hasLocalizedEquivalent ? basePath : '/';
+
+    var greekPath = hasLocalizedEquivalent
+        ? (basePath === '/' ? '/gr/' : '/gr' + basePath)
+        : '/gr/';
+
+    var frenchPath = hasLocalizedEquivalent
+        ? (basePath === '/' ? '/fr/' : '/fr' + basePath)
+        : '/fr/';
 
     // Debug Log
     console.log("Current Path:", path);

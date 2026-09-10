@@ -10,6 +10,7 @@ Sections
 8. Services Section - line 470
 9. Industry Focus Section - line 626
 10. Contact Intro Section - line 748
+11. Contact Page - line 1765
 */
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
@@ -327,12 +328,6 @@ p {
     letter-spacing: 0.12em;
 }
 
-.lang-switcher a:hover {
-    font-size: 0px;
-    cursor:pointer;
-    color: var(--color-primary);
-    
-}
 
 .lang-switcher:hover {
 font-size:20px;
@@ -366,34 +361,7 @@ font-size:20px;
 
 
 
-.header-cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    min-height: 46px;
-    padding: 0 18px;
-    border: 1px solid var(--color-primary);
-    border-radius: 3px;
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-    font-size: 0.92rem;
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    transition: transform 180ms ease, box-shadow 180ms ease;
-}
 
-.header-cta-button:hover,
-.header-cta-button:focus-visible {
-    transform: translateY(-2px);
-    box-shadow: 0 24px 34px rgba(36, 35, 80, 0.22);
-}
-
-.header-cta-button::after {
-    content: "→";
-    font-size: 1rem;
-    line-height: 1;
-}
 
 @media (max-width: 1024px) {
     .site-header {
@@ -436,13 +404,7 @@ font-size:20px;
         border-bottom: 1px solid var(--color-border);
     }
 
-    .header-cta-button {
-        display: none;
-        grid-column: 1 / -1;
-        width: 100%;
-        margin-top: 40px;
-        margin-bottom:20px;
-    }
+  
 
     .header-menu-checkbox:checked ~ .header-nav {
         display: flex;
@@ -1773,6 +1735,204 @@ linear-gradient(45deg,
     padding: 10vh 0;
   
 
+}
+
+
+/* CONTACT PAGE */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    min-height: 100vh;
+    background: var(--color-background);
+    margin-top: 86px;
+}
+
+.info-col {
+    background: var(--color-background-alt);
+    padding: 10vh 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-visual {
+    width: min(700px, 100%);
+    position: relative;
+}
+
+.contact-visual-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.mission-card {
+    position: absolute;
+    right: clamp(14px, 2vw, 24px);
+    bottom: clamp(14px, 2vw, 24px);
+    width: min(360px, calc(100% - 28px));
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(3px);
+    border: 1px solid var(--color-border);
+    padding: 18px;
+}
+
+.mission-card-logo {
+    width: min(240px, 90%);
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.mission-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+
+.form-col {
+    padding: 10vh 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface);
+}
+
+.form-container {
+    width: min(640px, 100%);
+}
+
+.contact-form-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: var(--font-section-title);
+    font-size: clamp(2rem, 2.7vw, 2.7rem);
+    font-weight: 300;
+    color: var(--color-secondary);
+    letter-spacing: 0.01em;
+}
+
+.contact-section .input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.contact-section .form-group {
+    margin-bottom: 16px;
+}
+
+.contact-section .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.contact-section .form-group input,
+.contact-section .form-group textarea {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    background: var(--color-background);
+    color: var(--color-text);
+    padding: 14px 16px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 300;
+    outline: none;
+}
+
+.contact-section .form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-section .form-group input:focus,
+.contact-section .form-group textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(149, 158, 123, 0.14);
+}
+
+.contact-section button[type="submit"] {
+    margin-top: 8px;
+    width: auto;
+    border: 1px solid var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-background);
+    padding: 14px 24px;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-section button[type="submit"]:hover,
+.contact-section button[type="submit"]:focus-visible {
+    background: var(--color-primary-light);
+    color: var(--color-secondary);
+}
+
+.contact-section button[type="submit"]:disabled {
+    opacity: 0.75;
+    cursor: wait;
+}
+
+#form-message {
+    display: none;
+    margin-top: 14px;
+    border-radius: 6px;
+    padding: 12px 14px;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+#form-message.success {
+    display: block;
+    border-color: rgba(80, 138, 102, 0.35);
+    background: rgba(80, 138, 102, 0.1);
+    color: #31523d;
+}
+
+#form-message.error {
+    display: block;
+    border-color: rgba(166, 88, 88, 0.35);
+    background: rgba(166, 88, 88, 0.1);
+    color: #692e2e;
+}
+
+@media (max-width: 1024px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+        margin-top: 78px;
+    }
+
+    .info-col,
+    .form-col {
+        padding: 64px 5%;
+    }
+
+    .contact-section .input-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .mission-card {
+        position: static;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .contact-section button[type="submit"] {
+        width: 100%;
+    }
 }
 
 
