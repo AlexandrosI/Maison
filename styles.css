@@ -33,7 +33,7 @@ Sections
     --font-body:  "Jost", ui-sans-serif, system-ui, sans-serif;
     --font-section-heading: "Jost", ui-sans-serif, system-ui, sans-serif;
     --font-section-title: Cormorant Garamond, Georgia, serif;
-    --container-width: min(80%, calc(100% - 180px));
+    --container-width: min(80%, calc(100% - 10px));
 }
 
 * {
@@ -42,18 +42,20 @@ Sections
 
 html {
     scroll-behavior: smooth;
-  
+    height: 100%;
 }
 
 body {
     margin: 0;
     max-width: 2560px;
     margin-inline: auto;
+    min-height: 100dvh;
     font-family: var(--font-body);
     font-weight: 300;
     letter-spacing:0.6px;
     color: var(--color-text);
-      box-shadow:  1px 8px 8px rgba(0, 0, 0, 0.1),
+    overflow-x: hidden;
+    box-shadow:  1px 8px 8px rgba(0, 0, 0, 0.1),
                  -1px 0px 1px rgba(0, 0, 0, 0.1) ;
    
 }
@@ -71,12 +73,12 @@ a {
 
 p {
     line-height:1.6;
-    font-size: 0.9vw;
+    font-size: clamp(0.98rem, 0.24vw + 0.86rem, 1.1rem);
 }
 
 @media (max-width: 1024px) {
     p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
 
@@ -87,6 +89,16 @@ p {
 
 .page-layout {
     width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
 }
 
 .small-divider {
@@ -139,16 +151,18 @@ footer .small-divider-left {
 
 
 
-
+.hero-title {   
+    color: white;
+}
 
 .p-hero-section-title {
     margin: 0;
     font-family: var(--font-section-title);
-    font-size: clamp(4.85rem, 5.5vw, 6.6rem);
+    font-size: clamp(3.85rem, 4.5vw, 6rem);
     font-weight: 300;
     line-height: 1.04;
   
-    color: var(--color-primary);
+    color: white;
 }
 
 
@@ -453,12 +467,15 @@ font-size:20px;
     }
 }
 
-/* Footer */
+/********* Footer************* */
 
 .site-footer {
-    padding: 0 0 26px;
+    margin-top: auto;
+    flex-shrink: 0;
+    padding: 0 0 calc(26px + env(safe-area-inset-bottom, 0px));
     background-color: var(--color-background-alt );
     color: var(--color-text);
+    overflow: visible;
 }
 
 .footer-main-grid {
@@ -576,6 +593,12 @@ font-size:20px;
     text-decoration: underline;
 }
 
+.footer-cta-column p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
 
 
 
@@ -583,6 +606,8 @@ font-size:20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
    
     gap: 18px;
     padding-top: 18px;
@@ -599,12 +624,12 @@ font-size:20px;
     gap: 18px;
 }
 
-.copyright-text  p{
+.copyright-text {
 
     color:var(--color-primary);
     font-weight:700;
 }
-    span .zandros {
+.footer-legal-links .zandros {
        
         font-weight: 500;
         font-size: 1.1rem;
@@ -646,27 +671,14 @@ font-size:20px;
 /* Home Hero Section */
 
 .hero-section {
-  
-       position:relative;
-    min-height:90vh;
-  
-  background: 
-linear-gradient(45deg, 
-      rgba(255, 255, 255, 0.7) 30%,
-      rgba(255, 255, 255, 0.4) 50%,        
-      rgba(255, 255, 255, 0) 70%),        
-    
-       url("media/hero.webp");
-        background-size:cover;
-    
-    
-    background-position: center;
 
+    position:relative;
+    height:70vh;
 }
 
 @media (max-width: 1024px) {
     .hero-section {
-        min-height: 60vh;
+        height: 60vh;
        
     }
 }
@@ -681,21 +693,7 @@ linear-gradient(45deg,
 
 
 
-#home.hero-section.hero-zoom-active {
-    animation: hero-background-breath 18s ease-in-out infinite;
-}
 
-@keyframes hero-background-breath {
-    0% {
-        background-size: 100% 100%, 110%;
-    }
-    50% {
-        background-size: 100% 100%, 116%;
-    }
-    100% {
-        background-size: 100% 100%, 110%;
-    }
-}
 
 
 
@@ -707,9 +705,9 @@ linear-gradient(45deg,
     margin: 28px 0 0;
     max-width: 42ch;
     font-size: 1.35rem;
-    font-weight:500;
+    font-weight:400;
     line-height: 1.6;
-    color: var(--color-text-muted);
+    color:white;
 }
 
 .hero-actions {
@@ -1184,30 +1182,14 @@ padding:20%;
 
 /* The Place */
 
-.the-place {
-    background-image: url("media/bebop-joomla-paroikia-sunset.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    min-height: 640px;
-  
-}
+
 
 
 @media (max-width: 1024px) {
 
    
 
-    .hero-section:not(.hero-slider) {
-        padding: 35% 2% 25% 2%;
-        background-size: 110% 180%, 110% 180%;
-        background-position: center, center;
-    }
-
-     #home.hero-section:not(.hero-slider).hero-zoom-active {
-        animation: hero-background-breath-mobile 18s ease-in-out infinite;
-    }
+    
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 34px;
@@ -1280,50 +1262,7 @@ padding:20%;
 
 
 
-/*GLOBAL INNER HERO SECTIONS STYLES */
 
-#inner-hero.hero-section.hero-zoom-active {
-    animation: hero-background-breath 18s ease-in-out infinite;
-}
-
-
-@keyframes hero-background-breath-mobile {
-    0% {
-        background-size: 100% 100%, 130% 130%;
-    }
-    50% {
-        background-size: 100% 100%, 136% 136%;
-    }
-    100% {
-        background-size: 100% 100%, 130% 130%;
-    }
-}
-
-
-
-.hero-section#inner-hero {
-    
-        height: 90vh;
-     
-}
-
-@media (min-width: 1921px) {
-    .hero-section#inner-hero {
-       height: 60vh;
-    }
-}
-
-@media (max-width: 1024px) {
-    .hero-section#inner-hero {
-       height: 60vh;
-    }
-
-     #inner-hero.hero-section.hero-zoom-active {
-        animation: hero-background-breath-mobile 18s ease-in-out infinite;
-    }
-
-    
-}
 
 
 
@@ -1759,62 +1698,48 @@ linear-gradient(45deg,
 }
 
 
-/* CONTACT PAGE */
+/************ CONTACT PAGE ***********/
 
 .contact-section {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    min-height: 100vh;
+   
     background: var(--color-background);
     margin-top: 86px;
 }
 
 .info-col {
-    background: var(--color-background-alt);
     padding: 10vh 4vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    gap: clamp(18px, 2vw, 30px);
+    align-content: start;
 }
 
-.contact-visual {
-    width: min(700px, 100%);
-    position: relative;
-}
-
-.contact-visual-image {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-}
-
-.mission-card {
-    position: absolute;
-    right: clamp(14px, 2vw, 24px);
-    bottom: clamp(14px, 2vw, 24px);
-    width: min(360px, calc(100% - 28px));
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(3px);
+.info-box {
+   background-color: #ffffff;
     border: 1px solid var(--color-border);
-    padding: 18px;
+    padding:5%;
 }
 
-.mission-card-logo {
-    width: min(240px, 90%);
-    height: auto;
-    margin-bottom: 12px;
+
+.box {
+      background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    padding:5%;
 }
 
-.mission-card p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--color-text);
+.four-boxes {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
 }
+
+
+/* form column */
 
 .form-col {
     padding: 10vh 5vw;
     display: flex;
-    align-items: center;
     justify-content: center;
     background: var(--color-surface);
 }
@@ -1945,12 +1870,7 @@ linear-gradient(45deg,
 }
 
 @media (max-width: 640px) {
-    .mission-card {
-        position: static;
-        width: 100%;
-        margin-top: 16px;
-    }
-
+    
     .contact-section button[type="submit"] {
         width: 100%;
     }
@@ -2080,39 +2000,29 @@ linear-gradient(45deg,
 
 
 
-.restaurant-hero {
-    position:relative;
-    min-height:80vh;
-  
-  background: 
-linear-gradient(45deg, 
-      rgba(255, 255, 255, 0.9) 30%,
-      rgba(255, 255, 255, 0) 50%,        
-      rgba(255, 255, 255, 0) 70%),        
+.contact-hero {
+  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
     
-       url("media/bebop-joomla-interior.jpg");
-        background-size:cover;
-        background-position: center;
-        
+       url("media/hero-images/la-maison-vert-amande-contact-hero.webp");
+       
+      background-size: cover;       
+  background-position: top; 
+  background-repeat: no-repeat;
 
 }
 
 
 @media (max-width: 1024px) {
-    .restaurant-hero {
-        min-height: 60vh;
-      
-    }
+    
 }
 
 .restaurant-title {
     position:absolute;
     bottom:5%;
     left:5%;
-    
 }
 
-.the-place-description {
+.contact-description {
     max-width:62ch;
     margin-bottom:8vh;
 
