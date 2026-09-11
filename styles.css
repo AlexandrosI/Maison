@@ -673,7 +673,7 @@ font-size:20px;
 .hero-section {
 
     position:relative;
-    height:70vh;
+    height:80vh;
 }
 
 @media (max-width: 1024px) {
@@ -771,7 +771,7 @@ font-size:20px;
     align-items: center;
     justify-content: center;
     min-height: 90vh;
-    padding: 170px 0 128px;
+    padding: 130vh70px 0 35vh;
     text-align: center;
 }
 
@@ -1040,7 +1040,7 @@ font-size:20px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
     gap: 60px;
-    width:60vw;
+    width:70vw;
 }
 
 @media (max-width: 1024px) {
@@ -1070,9 +1070,10 @@ font-size:20px;
 
 .about-visual img {
     width: 100%;
-    min-height: 520px;
+   
     object-fit: cover;
     border-radius: 3px;
+    margin-bottom:20px;
 }
 
 
@@ -1508,34 +1509,26 @@ font-size: 0.8rem;
 
 
 
-/* THE PRODUCT SECTION HOMEPAGE */
 
 
-.ingredients-hero {
-    position:relative;
-    min-height:80vh;
-  
-  background: 
-linear-gradient(45deg, 
-      rgba(255, 255, 255, 0.9) 30%,
-      rgba(255, 255, 255, 0) 50%,        
-      rgba(255, 255, 255, 0) 70%),        
+
+.about-hero {
+  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
     
-       url("media/bebop-joomla-ingredients-hero.webp");
-        background-size:cover;
-        background-position: center;
-        
+       url("media/hero-images/la-maison-vert-amande-about-hero.webp");
+       
+      background-size: cover;       
+  background-position: top; 
+  background-repeat: no-repeat;
 
 }
+
 
 @media (max-width: 1024px) {
-    .ingredients-hero {
-        min-height: 60vh;
-      
-    }
+    
 }
 
-.ingredients-hero-title {
+.about-hero-title {
     position:absolute;
     bottom:5%;
     left:5%;
@@ -1544,12 +1537,19 @@ linear-gradient(45deg,
 
 
 
-@media (max-width: 1024px) {
-    .ingredients-hero {
-        background-position: center;
-      
-    }
+/*********THE HOUSE PAGE *********/
+
+.house-hero {
+  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
+    
+       url("media/hero-images/la-maison-vert-amande-house-hero.webp");
+       
+      background-size: fit-content;       
+  background-position: bottom; 
+  background-repeat: no-repeat;
+
 }
+
 
 
 .product-description {
