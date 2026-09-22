@@ -1030,9 +1030,15 @@ font-size:20px;
 
 /* About Section */
 
+
 .about-section {
     padding: 88px 0;
     background-color: var(--color-surface);
+}
+
+#about {
+       
+background-color: var(--color-background-alt);
 }
 
 .about-grid {
