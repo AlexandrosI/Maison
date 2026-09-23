@@ -1643,6 +1643,21 @@ font-size: 0.8rem;
 }
 
 
+/**********     PRODUCT PAGE **********/
+
+
+
+.product-hero {
+  background-image:linear-gradient(rgba(82, 96, 86, 0.6), rgba(62, 86, 86, 0.6)),        
+    
+       url("media/hero-images/la-maison-vert-amande-products-hero.webp");
+       
+      background-size: cover;       
+  background-position: center; 
+  background-repeat: no-repeat;
+
+}
+
 
 
 
@@ -1694,6 +1709,9 @@ font-size: 0.8rem;
 
 
 
+#products-section2 {
+    background-color: var(--color-background-alt);
+}
 
 
 
