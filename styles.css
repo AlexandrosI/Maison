@@ -76,7 +76,7 @@ p {
     font-size: clamp(0.98rem, 0.24vw + 0.86rem, 1.1rem);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     p {
         font-size: 1rem;
     }
@@ -133,7 +133,7 @@ footer .small-divider-left {
     color: var(--color-primary);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .h2-section-title {
         font-size: 0.7rem;
     }
@@ -173,6 +173,30 @@ footer .small-divider-left {
     font-weight: 300;
     line-height: 1.12;
     color: var(--color-secondary);
+}
+
+.room-features {
+    display: grid;
+    gap: 10px;
+    margin: 26px 0 ;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.room-features li {
+    position: relative;
+    padding-left: 26px;
+}
+
+.room-features li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "\2713";
+    color: var(--color-primary);
+    font-weight: 700;
 }
 
 .button {
@@ -217,7 +241,7 @@ footer .small-divider-left {
     box-shadow: 0 14px 26px rgba(36, 35, 80, 0.08);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     :root {
         --container-width: min(100% - 70px, 1180px);
     }
@@ -262,7 +286,7 @@ footer .small-divider-left {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
    .row-container.header-inner {
     padding-left:3%;
     padding-right:3%;
@@ -393,7 +417,7 @@ font-size:20px;
     
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .lang-switcher span {
         padding-bottom:10px;
     }
@@ -403,7 +427,7 @@ font-size:20px;
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .site-header {
         padding: 10px 0 12px;
     }
@@ -638,7 +662,7 @@ font-size:20px;
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .footer-main-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -676,7 +700,7 @@ font-size:20px;
     height:80vh;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .hero-section {
         height: 60vh;
        
@@ -869,7 +893,7 @@ font-size:20px;
     background-color: rgba(255, 255, 255, 0.74);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .hero-slider {
         min-height: 74vh;
     }
@@ -960,7 +984,7 @@ font-size:20px;
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .message-description {
         width: 80vw;
         font-size: 1.2rem;
@@ -1049,11 +1073,24 @@ background-color: var(--color-background-alt);
     width:70vw;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1921px) {
+    .about-grid {
+        width:60vw;
+    }
+}
+
+@media (max-width: 1366px) {
+    .about-grid {
+        width:80vw;
+    }
+}
+
+@media (max-width: 1032px) {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 38px;
         width:80vw;
+        
     }
 }
 
@@ -1139,7 +1176,7 @@ background-color: var(--color-background-alt);
    
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .the-sounds-grid {
         grid-template-columns: 1fr;
     }
@@ -1192,7 +1229,8 @@ padding:20%;
 
 
 
-@media (max-width: 1024px) {
+
+@media (max-width: 1032px) {
 
    
 
@@ -1216,9 +1254,7 @@ padding:20%;
         gap: 38px;
     }
 
-    .about-visual {
-        max-width: 680px;
-    }
+
 
     .about-visual img {
         min-height: 440px;
@@ -1293,7 +1329,7 @@ linear-gradient(10deg,
   
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .location-hero {
         min-height: 60vh;
       
@@ -1339,7 +1375,7 @@ linear-gradient(10deg,
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
 
   
 
@@ -1359,7 +1395,7 @@ linear-gradient(10deg,
 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .three-columns {
         grid-template-columns: 1fr;
         gap: 34px;
@@ -1388,7 +1424,7 @@ linear-gradient(10deg,
     letter-spacing:0.5px;
  }
 
- @media (max-width: 1024px) {
+ @media (max-width: 1032px) {
     .column .h3-section-title {
         font-size: 2.5rem;
     }
@@ -1404,7 +1440,7 @@ linear-gradient(10deg,
    
  }
 
- @media (max-width: 1024px) {
+ @media (max-width: 1032px) {
     .find-us-container {
         flex-direction: column;
     }
@@ -1423,7 +1459,7 @@ linear-gradient(10deg,
   
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
   .find-us-visual {
   padding-bottom:40px;
   }
@@ -1491,7 +1527,7 @@ font-size: 0.8rem;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
   .info-left {
    font-size: 0.9rem;
   }
@@ -1530,7 +1566,7 @@ font-size: 0.8rem;
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     
 }
 
@@ -1550,11 +1586,63 @@ font-size: 0.8rem;
     
        url("media/hero-images/la-maison-vert-amande-house-hero.webp");
        
-      background-size: fit-content;       
-  background-position: bottom; 
+    
+      object-fit: cover;
+  background-position: center; 
   background-repeat: no-repeat;
 
 }
+
+
+.two-photos {
+    display: flex;
+    gap:25px;
+}
+
+.photo1 {
+    background-image: url("media/la-maison-vert-amande-house-kitchen.webp");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+.photo2 {
+    background-image: url("media/la-maison-vert-amande-bathroom.webp");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .two-photos {
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    .two-photos img {
+        width: 100%;
+    }
+}
+
+.about-visual.house-bedroom-visual {
+      background:      
+    
+       url("media/la-maison-vert-amande-bedroom.jpg"); 
+       height:50vh;
+       width:auto;
+       background-position: center;
+      
+      
+}
+
+
 
 
 
@@ -1572,7 +1660,7 @@ font-size: 0.8rem;
     
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     #product-row {
         grid-template-columns: 1fr;
         gap: 34px;
@@ -1606,102 +1694,7 @@ font-size: 0.8rem;
 
 
 
-.ingredients-image1 {
-    width:30vh;
-    height:40vh;
-    overflow:hidden;
-    object-fit:cover;
-    object-position:center;
-}
 
-.ingredients-image2 {
-    width:30vh;
-    height:40vh;
-    overflow:hidden;
-    object-fit:cover;
-    object-position:center;
-    margin-top:40px;
-}
-
-
-
-.cocktails-section {
-    
-    background-color: var(--color-background);
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-}
-
-#cocktails-row {
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-    gap: 2vw;
-    padding:10vh 0;
-    
-    
-}
-
-.cocktails-visual-column {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top:auto;
-    margin-bottom:auto;
-    gap: 2vh;
-     margin-left:auto;
-    margin-right:auto;
-}
-   
-
-
-@media (min-width: 1921px) {
-    .cocktails-visual-column {
-        gap: 30px;
-    }
-}
-
-@media (max-width: 1024px) {
-    #cocktails-row {
-        grid-template-columns: 1fr;
-        gap: 34px;
-    }
-
-    #cocktails-row .cocktails-info-column {
-        order: 1;
-    }
-
-    #cocktails-row .cocktails-visual-column {
-        order: 2;
-    }
-}
-
-.cocktails-image1 {
-    width:30vh;
-    height:40vh;
-    overflow:hidden;
-    object-fit:cover;
-    object-position:center;
-    margin-top:40px;
-}
-.cocktails-image2 {
-    width:30vh;
-    height:40vh;
-    overflow:hidden;
-    object-fit:cover;
-    object-position:center;
-    
-}
-
-
-.ingredients-cta-row {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
-    align-items:center;
-    padding: 10vh 0;
-  
-
-}
 
 
 /************ CONTACT PAGE ***********/
@@ -1859,7 +1852,7 @@ font-size: 0.8rem;
     color: #692e2e;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .contact-section {
         grid-template-columns: 1fr;
         margin-top: 78px;
@@ -1967,7 +1960,7 @@ font-size: 0.8rem;
     padding: 10vh 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .music-images-grid {
         grid-template-columns: 1fr;
         gap: 34px;
@@ -2018,7 +2011,7 @@ font-size: 0.8rem;
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     
 }
 
@@ -2050,7 +2043,7 @@ font-size: 0.8rem;
     padding: 10vh 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .architecture-grid {
         grid-template-columns: 1fr;
         gap: 34px;
@@ -2115,7 +2108,7 @@ font-size: 0.8rem;
  
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .sunset-image {
         height: 400px;
     }
@@ -2133,7 +2126,7 @@ font-size: 0.8rem;
     padding: 10vh 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .reservations-grid {
         grid-template-columns: 1fr;
         gap: 34px;
@@ -2146,7 +2139,7 @@ font-size: 0.8rem;
     align-items:center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
     .cta-buttons {
         justify-content:center;
     }
