@@ -1070,7 +1070,7 @@ background-color: var(--color-background-alt);
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
     gap: 60px;
-    width:70vw;
+    width: var(--container-width);
 }
 
 @media (min-width: 1921px) {
@@ -1709,8 +1709,54 @@ font-size: 0.8rem;
 
 
 
-#products-section2 {
+#products-honey {
     background-color: var(--color-background-alt);
+}
+
+
+#recipe-section {
+    background-color: var(--color-background-alt);
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:60px;
+  
+    
+    
+   
+}
+
+@media (max-width: 1032px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.recipe-left-column {
+      border: 1px solid var(--color-border);
+      padding:4%;
+      background-color: var(--color-background);
+}
+
+.recipe-list {
+    list-style: none;
+    
+}
+
+.recipe-list  {
+    padding:0;
+}
+
+.right-column-recipe{
+    margin-left:30px;
+}
+
+.recipe-table {
+   display:flex;
 }
 
 
