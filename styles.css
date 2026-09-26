@@ -573,7 +573,7 @@ font-size:20px;
 }
 
 
-.footer-contact-item {
+.details-contact-item {
     display: flex;
     align-items: baseline;
     gap: 10px;
@@ -581,7 +581,7 @@ font-size:20px;
 }
 
 
-.footer-contact-icon {
+.details-contact-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -590,7 +590,7 @@ font-size:20px;
     color: var(--color-primary);
 }
 
-.footer-contact-icon.fa-solid {
+.details-contact-icon.fa-solid {
     font-size: 1rem;
     line-height: 1;
 }
@@ -598,8 +598,8 @@ font-size:20px;
 
 
 .footer-nav-column a,
-.footer-contact-column a,
-.footer-contact-column p {
+.details-contact-column a,
+.details-contact-column p {
     margin: 0;
     font-size: 1.05rem;
     line-height: 1.6;
@@ -613,7 +613,7 @@ font-size:20px;
     padding: 0;
 }
 
-.footer-contact-column a:hover {
+.details-contact-column a:hover {
     text-decoration: underline;
 }
 
@@ -1015,12 +1015,12 @@ font-size:20px;
 }
 
 
-#testimonial-messages {
+.message-cards {
     padding: 88px 0;
     background-color: var(--color-background);
 }
 
-.testimonial-messages-grid {
+.message-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(2, auto);
@@ -1030,7 +1030,7 @@ font-size:20px;
 }
 
 @media (max-width: 767px) {
-    .testimonial-messages-grid {
+    .message-cards-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 16px;
@@ -1038,7 +1038,7 @@ font-size:20px;
 }
 
 
-.testimonial-message {
+.message-card {
     border: 1px solid var(--color-border);
     background-color: #ffffff;
     padding:5%;
@@ -1760,6 +1760,63 @@ font-size: 0.8rem;
 }
 
 
+/************ FIND US PAGE ***********/
+
+
+
+#find-us-details {
+    padding: 88px 0;
+    background-color: var(--color-background-alt);
+}
+
+
+.find-hero {
+  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
+    
+       url("media/hero-images/la-maison-vert-amande-find-hero.webp");
+       
+      background-size: cover;       
+  background-position: top; 
+  background-repeat: no-repeat;
+
+}
+
+.card-symbol {
+    font-size: 2.2rem;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+
+.divider-find {
+    margin-bottom:30px;
+}
+
+
+#map-section {
+   padding: 88px 0;
+    
+}
+
+.map-embed {
+    display: block;
+    width: 80%;
+    border: 0;
+    margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+    .map-embed {
+        width: calc(100% - 44px);
+    }
+}
+
 
 /************ CONTACT PAGE ***********/
 
@@ -1940,120 +1997,6 @@ font-size: 0.8rem;
 }
 
 
-/* THE SOUNDS PAGE */
-
-
-   .sounds-hero {
-  
-  background:  
-
-        linear-gradient(rgba(252, 246, 236, 0.43),
-            rgba(252, 246, 236, 0.68)
-            
-        ),
-       url("media/bebop-joomla-the-bar.jpg");
-        background-size:cover;
-  
-  
-}
-
-.the-genres {
-    padding: 10vh 0;
-    background-color: var(--color-background);
-    border-top: 1px solid var(--color-border);
- border-bottom: 1px solid var(--color-border);
-}
-
-
-.genres-list {
-    
-   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top:6vh;
- 
-}
-
-
-.genre-row {
-  display: grid;
-  grid-template-columns: 80px 1fr 2fr;
-  gap: 24px;
-  align-items: center;
-  padding: 16px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.col-number {
-  font-size: 24px;
-  font-weight: bold;
-
-}
-
-.col-genre {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.col-desc {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-  .genre-row {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 8px;
-  }
-
-  .col-number {
-    font-size: 20px;
-  }
-
-  .col-genre {
-    grid-column: 1;
-  }
-}
-
-.music-images-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2vw;
-    padding: 10vh 0;
-}
-
-@media (max-width: 1032px) {
-    .music-images-grid {
-        grid-template-columns: 1fr;
-        gap: 34px;
-    }
-}
-
-.floating-image  {
-     animation: float 3s ease-in-out infinite;
-}
-
-.floating-image2 {
-     animation: float 4s ease-in-out infinite;
-}
-
-.floating-image3 {
-     animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 
 
 /* THE PLACE PAGE */
