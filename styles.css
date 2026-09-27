@@ -731,6 +731,9 @@ font-size:20px;
 
 .hero-copy {
     padding: 42px 0;
+      position:absolute;
+    bottom:5%;
+    left:5%;
 }
 
 .hero-description {
@@ -1660,9 +1663,9 @@ font-size: 0.8rem;
 
 
 .product-hero {
-  background-image:linear-gradient(rgba(82, 96, 86, 0.6), rgba(62, 86, 86, 0.6)),        
+  background-image:        
     
-       url("media/hero-images/la-maison-vert-amande-products-hero.webp");
+       url("media/hero-images/la-maison-vert-amande-products-hero3.webp");
        
       background-size: cover;       
   background-position: center; 
@@ -1670,7 +1673,36 @@ font-size: 0.8rem;
 
 }
 
+@media (max-width: 1032px) {
+    .product-hero {
+       background-image:        
+    
+       url("media/hero-images/la-maison-vert-amande-products-hero3-mobile.webp");
+      
+    }
+}
 
+
+.product-info {
+  
+    color: var(--color-primary);
+    isolation: isolate;
+    
+}
+
+.hero-copy.product-info {
+    position:absolute;
+    bottom:15%;  
+    width:33%;
+}
+
+
+
+.product-info .hero-title,
+.product-info .p-hero-section-title,
+.product-info .hero-description {
+    color: var(--color-primary);
+}
 
 
 .product-description {
@@ -2073,18 +2105,13 @@ font-size: 0.8rem;
     
 }
 
-.restaurant-title {
-    position:absolute;
-    bottom:5%;
-    left:5%;
-}
+
 
 .contact-description {
     max-width:62ch;
     margin-bottom:8vh;
 
 }
-
 
 
 .bebop-architecture {
