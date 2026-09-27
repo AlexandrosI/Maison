@@ -1696,6 +1696,15 @@ font-size: 0.8rem;
     width:33%;
 }
 
+@media (max-width: 1032px) {
+    .hero-copy.product-info {
+        position:absolute;
+        bottom:-25%;
+   
+    width:90%;
+    }
+}
+
 
 
 .product-info .hero-title,
