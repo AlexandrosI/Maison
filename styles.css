@@ -1293,6 +1293,7 @@ background-color: var(--color-background-alt);
     margin-top:50px;
 }
 
+}
 
 
 /* THE LOCATION PAGE */
@@ -1573,7 +1574,7 @@ font-size: 0.8rem;
        url("media/hero-images/la-maison-vert-amande-home-hero.webp");
        
     
-   object-fit: cover;  
+    background-size: cover;  
   background-position: center; 
   background-repeat: no-repeat;
 
@@ -2321,28 +2322,5 @@ font-size: 0.8rem;
    font-size:0.8rem !important ;
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
 
 
