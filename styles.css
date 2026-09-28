@@ -729,11 +729,12 @@ font-size:20px;
 
 
 
-.hero-copy {
+.hero-copy.product-info {
     padding: 42px 0;
       position:absolute;
-    bottom:5%;
+    bottom:45%;
     left:5%;
+   
 }
 
 .hero-description {
@@ -976,7 +977,7 @@ font-size:20px;
 
 /* WELCOMING MESSAGE SECTION */
 
-.welcoming-message {
+.large-message {
     padding: 88px 0;
     background-color: var(--color-background);
 }
@@ -1678,7 +1679,7 @@ font-size: 0.8rem;
        background-image:        
     
        url("media/hero-images/la-maison-vert-amande-products-hero3-mobile.webp");
-      
+      margin-bottom:150px ;
     }
 }
 
@@ -1699,9 +1700,9 @@ font-size: 0.8rem;
 @media (max-width: 1032px) {
     .hero-copy.product-info {
         position:absolute;
-        bottom:-25%;
-   
-    width:90%;
+        bottom:-55%;
+   padding:56px 0;
+   width:80vw;
     }
 }
 
@@ -1870,7 +1871,118 @@ font-size: 0.8rem;
     }
 }
 
+/******* PETROTHALASSA PAGE *******/
 
+.petrothalassa-hero {
+  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
+    
+       url("media/hero-images/la-maison-vert-amande-petrothalassa-hero.webp");
+       
+      background-size: cover;       
+  background-position: top; 
+  background-repeat: no-repeat;
+
+}
+
+
+#petrothalassa-beach {
+    padding: 88px 0;
+    background-color: var(--color-background-alt);
+}
+
+#petrothalassa-message {
+    background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)), url(media/la-maison-vert-amande-petrothalassa-sea-view.webp)
+    
+}
+
+#petrothalassa-message h2 {
+    color: white ;  
+}
+
+#petrothalassa-message p {
+    color: white ;  
+}
+
+
+#cultural-message {
+    padding: 88px 0;
+    background-color: white;
+}
+
+#cultural-message p {
+    color: var(--color-text) ;  
+}
+
+
+
+#cultural-message p {
+    text-align: center;
+   
+}
+
+#cultural-message .small-divider {
+
+    margin-bottom: 30px;
+}
+
+
+#petrothalassa-amenities {
+    padding: 88px 0;
+    background-color: var(--color-background-alt);
+}
+
+
+#petrothalassa-amenities .h2-section-title {
+    text-align: center;
+}
+
+
+#petrothalassa-amenities .p-section-title {
+    text-align: center;
+}
+
+.amenities-description {
+   display: flex;
+  justify-content: center;
+   gap:40px;
+   margin-top:40px;
+   margin-bottom:40px;
+}
+
+@media (max-width: 640px) {
+    .amenities-description {
+        flex-direction: column;
+        
+    }
+}
+
+.announcement-box {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    padding:5%;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.p-small-title {
+    margin-bottom: 30px;
+    font-family: var(--font-section-title);
+    font-size: clamp(1.25rem, 2.3vw, 2.2rem);
+    font-weight: 300;
+    line-height: 1.12;
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.section-image-background {
+    background-image: url("media/la-maison-vert-amande-petrothalassa-sea-view.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    width: 100%;
+   
+}
 
 
 /*******NEARBY PAGE *******/
