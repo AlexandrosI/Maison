@@ -1482,9 +1482,9 @@ font-size: 0.8rem;
 
 
 .about-hero {
-  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
+  background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4)),           
     
-       url("media/hero-images/la-maison-vert-amande-about-hero.webp");
+       url("media/hero-images/la-maison-vert-amande-about-frame-hero.webp");
        
       background-size: cover;       
   background-position: top; 
@@ -1498,7 +1498,7 @@ font-size: 0.8rem;
 }
 
 .house-hero {
-  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
+background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4)),          
     
        url("media/hero-images/la-maison-vert-amande-home-hero.webp");
        
@@ -1718,7 +1718,7 @@ font-size: 0.8rem;
 
 
 .find-hero {
-  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
+  background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4)),         
     
        url("media/hero-images/la-maison-vert-amande-find-hero.webp");
        
@@ -1859,7 +1859,7 @@ font-size: 0.8rem;
 /*******NEARBY PAGE *******/
 
 .nearby-hero {
-  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
+  background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4)),        
     
        url("media/hero-images/la-maison-vert-amande-nearby-hero.webp");
        
