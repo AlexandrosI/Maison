@@ -299,6 +299,7 @@ footer .small-divider-left {
 .header-logo img {
     width: 322px;
     height: auto;
+    padding-left: 5%;
 }
 
 .header-menu-checkbox {
@@ -1777,7 +1778,7 @@ background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4))
 /******* PETROTHALASSA PAGE *******/
 
 .petrothalassa-hero {
-  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
+  background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4)),        
     
        url("media/hero-images/la-maison-vert-amande-petrothalassa-hero.webp");
        
@@ -2092,7 +2093,7 @@ background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4))
 
 
 .contact-hero {
-  background-image:linear-gradient(rgba(62, 86, 86, 0.4), rgba(62, 86, 86, 0.4)),        
+  background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4)),        
     
        url("media/hero-images/la-maison-vert-amande-contact-hero.webp");
        
