@@ -1,29 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | La Maison Vert Amande</title>
+    <title>Réservation | La Maison Vert Amande</title>
     <meta
         name="description"
-        content="Contactez La Maison Vert Amande pour vos demandes de sejour et vos questions."
+        content="Contactez La Maison Vert Amande pour réserver votre séjour, poser vos questions ou connaître nos disponibilités."
     >
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="#SITE_URL#/fr/contact.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="La Maison Vert Amande">
-    <meta property="og:title" content="Contact | La Maison Vert Amande">
-    <meta property="og:description" content="Contactez La Maison Vert Amande pour vos demandes de sejour et vos questions.">
+    <meta property="og:title" content="Réservation | La Maison Vert Amande">
+    <meta property="og:description" content="Contactez La Maison Vert Amande pour réserver votre séjour, poser vos questions ou connaître nos disponibilités.">
     <meta property="og:url" content="#SITE_URL#/fr/contact.html">
     <meta property="og:image" content="#SITE_URL#/media/social/la-maison-vert-amande-contact-social.webp">
-    <meta property="og:image:alt" content="Contact pour reserver votre sejour a La Maison Vert Amande">
+    <meta property="og:image:alt" content="Réservez votre séjour à La Maison Vert Amande">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact | La Maison Vert Amande">
-    <meta name="twitter:description" content="Contactez La Maison Vert Amande pour vos demandes de sejour et vos questions.">
+    <meta name="twitter:title" content="Réservation | La Maison Vert Amande">
+    <meta name="twitter:description" content="Contactez La Maison Vert Amande pour réserver votre séjour, poser vos questions ou connaître nos disponibilités.">
     <meta name="twitter:image" content="#SITE_URL#/media/social/la-maison-vert-amande-contact-social.webp">
-    <link rel="icon" type="image/png" href="../media/logo/bebop-favicon.ico">
+    <link rel="icon" type="image/png" href="../media/logo/maison-favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -34,18 +33,25 @@
         <div id="site-header-placeholder"></div>
 
         <main>
-            <section class="contact-section" aria-label="Section contact">
-                <div class="info-col">
-                    <div class="contact-visual">
-                        <img class="contact-visual-image" src="../media/la-maison-vert-amande-seating-room.webp" alt="Salon de La Maison Vert Amande">
-                        <aside class="mission-card">
-                            <img class="mission-card-logo" src="../media/logo/La-maison-logo-green.png" alt="Logo de La Maison Vert Amande">
-                            <p>Des partenariats durables fondes sur la confiance, la transparence et des resultats mesurables.</p>
-                        </aside>
+
+
+
+            <section class="hero-section contact-hero">
+                <div class="row-container">
+                    <div class="hero-copy hero-info">
+                        <h1 class="h2-section-title hero-title">Réservations</h1>
+                        <p class="p-hero-section-title">Demandez votre séjour</p>
+                        <p class="hero-description contact-description">Effectuez votre réservation en remplissant le formulaire ci-dessous ; nous confirmons chaque réservation personnellement, par écrit.</p>
+                        
+                    
                     </div>
                 </div>
+            </section>
 
-                <div class="form-col">
+
+            <section class="contact-section row-container" aria-label="Formulaire de réservation">
+                
+                   <div class="form-col">
                     <div class="form-container">
                         <h1 class="contact-form-title">Envoyez-nous un message</h1>
                         <form action="../send-mail.php" method="POST" id="contactForm">
@@ -54,59 +60,129 @@
 
                             <div class="input-row">
                                 <div class="col-half form-group">
-                                    <label for="name">Nom</label>
-                                    <input type="text" id="name" name="name" required placeholder="Votre nom">
+                                    <label for="name">Nom et prénom</label>
+                                    <input type="text" id="name" name="name" required placeholder="Jean Dupont">
                                 </div>
                                 <div class="col-half form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" required placeholder="jean@exemple.com">
                                 </div>
                             </div>
 
                             <div class="input-row">
                                 <div class="col-half form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="text" id="phone" name="phone" inputmode="numeric" pattern="[0-9]+" placeholder="Numbers only">
+                                    <label for="phone">Téléphone</label>
+                                    <input type="text" id="phone" name="phone" inputmode="numeric" pattern="[0-9]+" placeholder="Chiffres uniquement">
                                 </div>
                                 <div class="col-half form-group">
-                                    <label for="guests">Number of guests</label>
+                                    <label for="guests">Nombre de personnes</label>
                                     <input type="number" id="guests" name="guests" required min="1" step="1" inputmode="numeric">
                                 </div>
                             </div>
 
                             <div class="input-row">
                                 <div class="col-half form-group">
-                                    <label for="arrival">ARRIVAL</label>
-                                    <input type="date" id="arrival" name="arrival" required placeholder="mm/dd/yyyy">
+                                    <label for="arrival">Arrivée</label>
+                                    <input type="date" id="arrival" name="arrival" required placeholder="jj/mm/aaaa">
                                 </div>
                                 <div class="col-half form-group">
-                                    <label for="departure">DEPARTURE</label>
-                                    <input type="date" id="departure" name="departure" required placeholder="mm/dd/yyyy">
+                                    <label for="departure">Départ</label>
+                                    <input type="date" id="departure" name="departure" required placeholder="jj/mm/aaaa">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="subject">Sujet</label>
+                                <label for="subject">Objet</label>
                                 <input type="text" id="subject" name="subject" required placeholder="Comment pouvons-nous vous aider ?">
                             </div>
 
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Ecrivez votre message ici..."></textarea>
+                                <textarea id="message" name="message" rows="5" required placeholder="Saisissez votre message ici..."></textarea>
                             </div>
 
-                            <button type="submit" id="submitBtn" data-loading-text="Envoi...">Envoyer le message</button>
+                            <button type="submit" id="submitBtn" data-loading-text="Envoi en cours...">Envoyer le message</button>
                             <div id="form-message" role="status" aria-live="polite"></div>
                         </form>
                     </div>
+                </div>   
+
+
+
+
+
+                <div class="info-col">
+                    <div class="info-box">
+                        <h2 class="h2-section-title"> Réservations</h2>
+                        <div class="small-divider-left"></div>
+                        <p>Toute demande de réservation effectuée par téléphone ou par e-mail sera confirmée par écrit. Elle ne sera définitive qu’après réception du paiement intégral du séjour.</p>
+                    <p>Pour une nuit même — ou moins de 24 heures à l’avance —, veuillez nous contacter au préalable par téléphone au +30 698 080 2532 afin de convenir de votre heure d’arrivée. Sans cet appel, nous ne pouvons pas garantir que nous serons présents pour vous accueillir.</p>
+
+
+
+                    </div>
+
+                    <div class="info-box">
+                        <h2 class="h2-section-title"> Annulations</h2>
+                        <div class="small-divider-left"></div>
+                        <p>En cas d'annulation jusqu'à 30 jours avant l'arrivée : 50 % du montant total est dû. Entre 15 et 7 jours avant l'arrivée : le montant total du séjour est dû.</p>
+
+                    </div>
+
+                    <div class="four-boxes">
+                        <div class="box">
+                            <p class="box-title">Arrivée</p>
+                            <p class="box-content">Généralement à partir de 14 h.</p>
+                        </div>
+                  
+                   
+                        <div class="box">
+                            <p class="box-title">Départ</p>
+                            <p class="box-content">Avant midi</p>
+                        </div>
+                 
+                   
+                        <div class="box">
+                            <p class="box-title">Interdiction de fumer</p>
+                            <p class="box-content">La maison est entièrement non-fumeur.</p>
+                        </div>
+                  
+                    
+                        <div class="box">
+                            <p class="box-title">Animaux interdits</p>
+                            <p class="box-content">Les animaux ne sont pas admis dans la maison.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h2 class="h2-section-title"> Paiement</h2>
+                        <div class="small-divider-left"></div>
+        
+                        <p>Dès confirmation de votre réservation, nous vous enverrons un e-mail contenant les informations relatives au paiement. Un e-mail de confirmation vous sera envoyé dès réception du paiement. Si vous avez d'autres questions, nous nous ferons un plaisir d'y répondre.</p>
+
+                    </div>
+
+                    <div class="info-box">
+                        <h2 class="h2-section-title"> Contact direct</h2>
+                        <div class="small-divider-left"></div>
+                        <p>Géraldine</p>
+                        <p>+30 6980802532</p>
+                        <p>kea33@hotmail.fr</p><br>
+                        
+
+                    </div>
+
                 </div>
+
+            
             </section>
 
-            <div id="site-footer-placeholder"></div>
+           <div id="site-footer-placeholder"></div>
         </main>
     </div>
 
     <script src="../components.js"></script>
     <script src="../send-mail.php?asset=form-handler"></script>
+     
 </body>
 </html>

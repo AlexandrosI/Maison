@@ -125,6 +125,7 @@ function initLanguageSwitcher(retriesLeft) {
         '/products.html',
         '/find.html',
         '/nearby.html',
+        '/petrothalassa.html',
         '/contact.html'
     ];
 

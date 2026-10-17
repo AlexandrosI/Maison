@@ -21,6 +21,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['asset']) && $_GET['asse
     var messageContainer = document.getElementById("form-message");
     var hideTimer = null;
 
+    // Client-side fallback messages, picked from the form's hidden "lang" field
+    var clientMessages = {
+        en: { unexpected: "Unexpected server response.", network: "Network error. Please try again." },
+        gr: { unexpected: "Μη αναμενόμενη απάντηση από τον διακομιστή.", network: "Σφάλμα δικτύου. Δοκιμάστε ξανά." },
+        fr: { unexpected: "Réponse inattendue du serveur.", network: "Erreur réseau. Veuillez réessayer." }
+    };
+    var langField = form.querySelector('input[name="lang"]');
+    var uiText = clientMessages[langField ? langField.value : "en"] || clientMessages.en;
+
     function showMessage(type, text) {
         if (!messageContainer || !text) {
             return;
@@ -76,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['asset']) && $_GET['asse
         })
             .then(function (response) {
                 return response.json().catch(function () {
-                    return { error: "Unexpected server response." };
+                    return { error: uiText.unexpected };
                 }).then(function (payload) {
                     if (!response.ok) {
                         throw payload;
@@ -96,10 +105,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['asset']) && $_GET['asse
                     return;
                 }
 
-                showMessage("error", "Unexpected server response.");
+                showMessage("error", uiText.unexpected);
             })
             .catch(function (error) {
-                var message = (error && error.error) ? error.error : "Network error. Please try again.";
+                var message = (error && error.error) ? error.error : uiText.network;
                 showMessage("error", message);
             })
             .finally(function () {
@@ -156,20 +165,20 @@ $messages = [
     ],
     'fr' => [
         'error_name_required' => "Le nom est obligatoire.",
-        'error_email_invalid' => "Une adresse email valide est obligatoire.",
-        'error_phone_invalid' => "Le telephone ne peut contenir que des chiffres.",
+        'error_email_invalid' => "Une adresse e-mail valide est obligatoire.",
+        'error_phone_invalid' => "Le téléphone ne peut contenir que des chiffres.",
         'error_guests_required' => "Le nombre de personnes est obligatoire.",
         'error_guests_invalid' => "Le nombre de personnes doit contenir uniquement des chiffres.",
-        'error_arrival_required' => "La date d'arrivee est obligatoire.",
-        'error_departure_required' => "La date de depart est obligatoire.",
-        'error_arrival_invalid' => "La date d'arrivee est invalide.",
-        'error_departure_invalid' => "La date de depart est invalide.",
-        'error_departure_before_arrival' => "La date de depart doit etre apres la date d'arrivee.",
-        'error_subject_required' => "Le sujet est obligatoire.",
+        'error_arrival_required' => "La date d'arrivée est obligatoire.",
+        'error_departure_required' => "La date de départ est obligatoire.",
+        'error_arrival_invalid' => "La date d'arrivée est invalide.",
+        'error_departure_invalid' => "La date de départ est invalide.",
+        'error_departure_before_arrival' => "La date de départ doit être postérieure à la date d'arrivée.",
+        'error_subject_required' => "L'objet est obligatoire.",
         'error_message_required' => "Le message est obligatoire.",
-        'success_sent' => "Votre message a ete envoye avec succes.",
-        'fail_server' => "Le serveur n'a pas pu envoyer l'email. Veuillez reessayer plus tard.",
-        'invalid_method' => "Methode de requete invalide."
+        'success_sent' => "Votre message a bien été envoyé.",
+        'fail_server' => "Le serveur n'a pas pu envoyer l'e-mail. Veuillez réessayer plus tard.",
+        'invalid_method' => "Méthode de requête invalide."
     ]
 ];
 
