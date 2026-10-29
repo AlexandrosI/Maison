@@ -34,16 +34,61 @@
 
         <main>
             
-            <section class="hero-section house-hero">
-                <div class="row-container">
-                    <div class="hero-copy hero-info">
-                        <h1 class="h2-section-title hero-title">La maison</h1>
-                        <p class="p-hero-section-title"></p>
-                        <p class="p-hero-section-title">Au cœur de la verdure et des oliveraies</p>
-                        <p class="hero-description contact-description">Un cadre privilégié et paisible où le temps s'écoule en toute sérénité.</p>
-                        
-                    
+            <section class="hero-section hero-slider" id="house-hero" aria-label="Diaporama de la maison">
+                <article class="hero-slide is-active" data-slide-index="0" aria-hidden="false" style="--hero-slide-image: url('../media/hero-images/la-maison-vert-amande-home-hero.webp');">
+                    <div class="row-container hero-slide-content">
+                        <div class="hero-copy">
+                            <p class="h2-section-title hero-slide-meta">La maison</p>
+                            <h1 class="p-section-title hero-slide-title">Au cœur de la verdure et des oliveraies</h1>
+                            <p class="hero-slide-description">Un cadre privilégié et paisible où le temps s'écoule en toute sérénité.</p>
+                        </div>
                     </div>
+                </article>
+
+                <article class="hero-slide" data-slide-index="1" aria-hidden="true" style="--hero-slide-image: url('../media/hero-images/la-maison-vert-amande-home-hero5.webp');">
+                    <div class="row-container hero-slide-content">
+                        <div class="hero-copy">
+                            <p class="h2-section-title hero-slide-meta">La maison</p>
+                            <p class="p-section-title hero-slide-title">Au cœur de la verdure et des oliveraies</p>
+                            <p class="hero-slide-description">Un cadre privilégié et paisible où le temps s'écoule en toute sérénité.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-slide-index="2" aria-hidden="true" style="--hero-slide-image: url('../media/hero-images/la-maison-vert-amande-home-hero3.webp');">
+                    <div class="row-container hero-slide-content">
+                        <div class="hero-copy">
+                            <p class="h2-section-title hero-slide-meta">La maison</p>
+                            <p class="p-section-title hero-slide-title">Au cœur de la verdure et des oliveraies</p>
+                            <p class="hero-slide-description">Un cadre privilégié et paisible où le temps s'écoule en toute sérénité.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-slide-index="3" aria-hidden="true" style="--hero-slide-image: url('../media/hero-images/la-maison-vert-amande-home-hero4.webp');">
+                    <div class="row-container hero-slide-content">
+                        <div class="hero-copy">
+                            <p class="h2-section-title hero-slide-meta">La maison</p>
+                            <p class="p-section-title hero-slide-title">Au cœur de la verdure et des oliveraies</p>
+                            <p class="hero-slide-description">Un cadre privilégié et paisible où le temps s'écoule en toute sérénité.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="hero-slider-nav" aria-label="Flèches du diaporama">
+                    <button class="hero-slider-arrow hero-slider-arrow-prev" type="button" aria-label="Diapositive précédente">
+                        <svg class="hero-slider-arrow-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="hero-slider-arrow hero-slider-arrow-next" type="button" aria-label="Diapositive suivante">
+                        <svg class="hero-slider-arrow-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+
+                <div class="hero-slider-pagination" aria-label="Pagination du diaporama">
+                    <button class="hero-slider-page is-active" type="button" data-slide-to="0" aria-label="Aller à la diapositive 1" aria-current="true"></button>
+                    <button class="hero-slider-page" type="button" data-slide-to="1" aria-label="Aller à la diapositive 2"></button>
+                    <button class="hero-slider-page" type="button" data-slide-to="2" aria-label="Aller à la diapositive 3"></button>
+                    <button class="hero-slider-page" type="button" data-slide-to="3" aria-label="Aller à la diapositive 4"></button>
                 </div>
             </section>
 
@@ -69,7 +114,7 @@
 
 
                     <div class="about-visual">
-                        <img src="../media/la-maison-vert-amande-porch.webp" alt="Vue depuis la véranda de La Maison Vert Amande">
+                        <img src="../media/la-maison-vert-amande-house.webp" alt="Façade de La Maison Vert Amande entre oliviers et jardins">
 
                         <div class="two-photos">
                             <div class="photo1"></div>
@@ -84,10 +129,12 @@
             </section>
 
             <section class="about-section" id="room-info" aria-label="La chambre">
-                <div class="row-container about-grid">
-                    <div class="about-visual house-bedroom-visual">
-                        
-                       
+                <div class="row-container about-grid room-info-grid">
+                    <div class="room-photo">
+                        <img src="../media/la-maison-vert-amande-house-bathroom.webp" alt="Salle de bains privée avec douche à La Maison Vert Amande" loading="lazy">
+                    </div>
+                    <div class="room-photo2">
+                        <img src="../media/la-maison-vert-amande-house-living%20room.webp" alt="Coin salon de la chambre à La Maison Vert Amande" loading="lazy">
                     </div>
                     <div>
                         <h2 class="h2-section-title">La chambre</h2>
@@ -144,10 +191,10 @@
                </div>
                </div>
             </section>
-            
 
-    
-            
+            <section class="section-image-background house-balcony-image" aria-hidden="true">
+
+            </section>
 
             <div id="site-footer-placeholder"></div>
         </main>

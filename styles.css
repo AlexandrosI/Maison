@@ -773,7 +773,7 @@ font-size:20px;
 
 .hero-slider .hero-copy {
     padding: 0;
-    max-width: 62ch;
+    
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -815,7 +815,7 @@ font-size:20px;
     align-items: center;
     justify-content: center;
     min-height: 90vh;
-    padding: 130vh70px 0 35vh;
+    padding: 130px 0 190px;
     text-align: center;
 }
 
@@ -826,7 +826,7 @@ font-size:20px;
 
 .p-section-title.hero-slide-title {
     color: #ffffff;
-    max-width: 14ch;
+   
     margin: 0 auto;
     font-size: clamp(3.2rem, 6.8vw, 6.7rem);
     line-height: 0.98;
@@ -845,17 +845,18 @@ font-size:20px;
     margin-top: 30px !important;
 }
 
+/* Arrows sit side by side, centred under the slide text, above the pagination (all screen sizes) */
 .hero-slider-nav {
     position: absolute;
-    inset: 0;
+    inset: auto 0 84px 0;
     z-index: 3;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
     pointer-events: none;
 }
 
 .hero-slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     width: 42px;
     height: 42px;
     border: 1px solid rgba(51, 55, 42, 0.1);
@@ -867,20 +868,22 @@ font-size:20px;
     cursor: pointer;
     pointer-events: auto;
     transition: transform 180ms ease, background-color 180ms ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.hero-slider-arrow-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
 }
 
 .hero-slider-arrow:hover,
 .hero-slider-arrow:focus-visible {
-    transform: translateY(-50%) scale(1.04);
+    transform: scale(1.04);
     background-color: #ffffff;
-}
-
-.hero-slider-arrow-prev {
-    left: 24px;
-}
-
-.hero-slider-arrow-next {
-    right: 24px;
 }
 
 .hero-slider-pagination {
@@ -920,17 +923,21 @@ font-size:20px;
 
     .hero-slide-content {
         min-height: 74vh;
-        padding: 148px 0 108px;
+        padding: 148px 0 160px;
     }
 
     .p-section-title.hero-slide-title {
-        font-size: clamp(2.7rem, 9vw, 4.4rem);
+        font-size: clamp(2.7rem, 14vw, 4.4rem);
         line-height: 1.04;
     }
 
     .hero-slide-description {
         max-width: 42ch;
-        font-size: 1rem;
+        font-size: 1.4rem;
+    }
+
+    .hero-slider-nav {
+        bottom: 72px;
     }
 
     .hero-slider-arrow {
@@ -950,12 +957,12 @@ font-size:20px;
 
     .hero-slide-content {
         min-height: 80vh;
-        padding: 124px 0 96px;
+        padding: 124px 0 140px;
     }
 
     .hero-slide-description {
         max-width: 32ch;
-        font-size: 0.96rem;
+        font-size: 1.3rem;
         line-height: 1.64;
     }
 
@@ -965,12 +972,8 @@ font-size:20px;
         font-size: 0.88rem;
     }
 
-    .hero-slider-arrow-prev {
-        left: 12px;
-    }
-
-    .hero-slider-arrow-next {
-        right: 12px;
+    .hero-slider-nav {
+        bottom: 58px;
     }
 
     .hero-slider-pagination {
@@ -1282,17 +1285,6 @@ linear-gradient(10deg,
 
 }
 
-.house-hero {
-background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4)),          
-    
-       url("media/hero-images/la-maison-vert-amande-home-hero.webp");
-       
-    
-    background-size: cover;  
-  background-position: center; 
-  background-repeat: no-repeat;
-
-}
 
 
 .two-photos {
@@ -1325,15 +1317,77 @@ background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4))
 
 }
 
-.about-visual.house-bedroom-visual {
-      background:      
+/* Room info: two photos + features list (3 columns) */
+.about-grid.room-info-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 50%;
+    align-items: stretch;
+    gap: 40px;
+}
+
+.room-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+
+.room-photo2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-top: 5vh;
+}
+
+@media (max-width: 1032px) {
+    .room-photo img,
+    .room-photo2 img {
+         margin-top: auto;
+    }
+}
+
+.room-info-grid > div:last-child {
+    align-self: center;
+    text-align: center;
+}
+
+.room-info-grid .room-features li {
+    padding-left: 0;
+}
+
+.room-info-grid .room-features li::before {
+    position: static;
+    margin-right: 8px;
+}
+
+/* Tablet: photos side by side, list underneath */
+@media (max-width: 1032px) {
+    .about-grid.room-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .room-info-grid > div:last-child {
+        grid-column: 1 / -1;
+        order: -1;
+        margin-bottom: 14px;
+    }
+
     
-       url("media/la-maison-vert-amande-bedroom.jpg"); 
-       height:50vh;
-       width:auto;
-       background-position: center;
-      
-      
+}
+
+/* Phone: everything stacked */
+@media (max-width: 640px) {
+    .about-grid.room-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+   
 }
 
 #room-info {
@@ -1656,6 +1710,11 @@ background-image:linear-gradient( rgba(12, 14, 18, 0.62), rgba(62, 86, 86, 0.4))
     min-height: 400px;
     width: 100%;
    
+}
+
+.section-image-background.house-balcony-image {
+    background-image: url("media/la-maison-vert-amande-house-balcony.webp");
+    min-height: 600px;
 }
 
 
