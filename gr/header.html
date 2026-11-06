@@ -1,36 +1,46 @@
 
-    
-        <header class="site-header" aria-label="Main header">
+
+        <header class="site-header" aria-label="Κεντρική κεφαλίδα">
             <div class="row-container header-inner">
-                <a class="header-logo" href="index.html#home" aria-label="Bebop x Joomla home">
-                    <img src="/media/logo/La-maison-logo-green.png" alt="Bebop x Joomla logo">
+                <a class="header-logo" href="index.html#home" aria-label="La Maison Vert Amande, αρχική σελίδα">
+                    <img src="/media/logo/la-maison-vert-amande-logo-transparent.png" alt="Λογότυπο La Maison Vert Amande">
                 </a>
 
-                <input class="header-menu-checkbox" type="checkbox" id="header-menu-toggle-fragment" aria-label="Toggle navigation menu">
+                <input class="header-menu-checkbox" type="checkbox" id="header-menu-toggle-fragment" aria-label="Άνοιγμα ή κλείσιμο μενού">
                 <label class="header-menu-toggle" for="header-menu-toggle-fragment" aria-hidden="true">
                     <span class="header-menu-line"></span>
                     <span class="header-menu-line"></span>
                     <span class="header-menu-line"></span>
                 </label>
 
-                <nav class="header-nav" aria-label="Primary navigation">
-                   
-                    <a href="about.html">ABOUT US</a>
-                    <a href="the-house.html">THE HOUSE</a>
-                    <a href="products.html">OUR PRODUCTS</a>
-                    <a href="find.html">HOW TO FIND US</a>
-                    <a href="nearby.html">NEARBY</a>
-                    
-                    
-                    <div class="lang-switcher" aria-label="Language switcher">
+                <nav class="header-nav" aria-label="Κύρια πλοήγηση">
+
+                    <a href="about.html">ΠΟΙΟΙ ΕΙΜΑΣΤΕ</a>
+                    <a href="the-house.html">ΤΟ ΣΠΙΤΙ</a>
+                    <a href="petrothalassa.html">Ο ΤΟΠΟΣ</a>
+                    <div class="nav-dropdown">
+                        <a class="nav-dropdown-link" href="products.html">ΤΑ ΠΡΟΪΟΝΤΑ ΜΑΣ</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="honey.html">ΜΕΛΙ</a></li>
+                            <li><a href="oliveoil.html">ΕΛΑΙΟΛΑΔΟ</a></li>
+                            <li><a href="marmalade.html">ΜΑΡΜΕΛΑΔΕΣ</a></li>
+                            <li><a href="spatholado.html">ΣΠΑΘΟΛΑΔΟ</a></li>
+                        </ul>
+                    </div>
+                    <a href="find.html">ΠΡΟΣΒΑΣΗ</a>
+                    <a href="nearby.html">ΚΟΝΤΑ ΜΑΣ</a>
+
+
+
+                   <div class="lang-switcher" aria-label="Επιλογή γλώσσας">
                         <a href="/" data-lang="en">EN</a>
                         <span aria-hidden="true">/</span>
                         <a href="/gr/" data-lang="gr">GR</a>
                         <span aria-hidden="true">/</span>
                         <a href="/fr/" data-lang="fr">FR</a>
                     </div>
-                    <a class="header-reserve-link button button-primary" href="contact.html" onclick="document.getElementById('header-menu-toggle-fragment').checked = false">Reserve</a>
+                    <a class="header-reserve-link button button-primary" href="contact.html" onclick="document.getElementById('header-menu-toggle-fragment').checked = false">ΚΡΑΤΗΣΗ</a>
                 </nav>
             </div>
         </header>
-  
+

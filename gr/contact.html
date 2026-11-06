@@ -1,32 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Επικοινωνία | La Maison Vert Amande</title>
+    <title>Κράτηση | La Maison Vert Amande</title>
     <meta
         name="description"
-        content="Επικοινωνήστε με το La Maison Vert Amande για κρατήσεις και πληροφορίες διαμονής."
+        content="Επικοινωνήστε με τη La Maison Vert Amande για να κλείσετε τη διαμονή σας, να κάνετε ερωτήσεις και να ζητήσετε διαθεσιμότητα."
     >
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="#SITE_URL#/gr/contact.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="La Maison Vert Amande">
-    <meta property="og:title" content="Επικοινωνία | La Maison Vert Amande">
-    <meta property="og:description" content="Επικοινωνήστε με το La Maison Vert Amande για κρατήσεις και πληροφορίες διαμονής.">
+    <meta property="og:title" content="Κράτηση | La Maison Vert Amande">
+    <meta property="og:description" content="Επικοινωνήστε με τη La Maison Vert Amande για να κλείσετε τη διαμονή σας, να κάνετε ερωτήσεις και να ζητήσετε διαθεσιμότητα.">
     <meta property="og:url" content="#SITE_URL#/gr/contact.html">
     <meta property="og:image" content="#SITE_URL#/media/social/la-maison-vert-amande-contact-social.webp">
-    <meta property="og:image:alt" content="Επικοινωνία για διαμονή στο La Maison Vert Amande">
+    <meta property="og:image:alt" content="Κλείστε τη διαμονή σας στη La Maison Vert Amande">
     <meta property="og:locale" content="el_GR">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Επικοινωνία | La Maison Vert Amande">
-    <meta name="twitter:description" content="Επικοινωνήστε με το La Maison Vert Amande για κρατήσεις και πληροφορίες διαμονής.">
+    <meta name="twitter:title" content="Κράτηση | La Maison Vert Amande">
+    <meta name="twitter:description" content="Επικοινωνήστε με τη La Maison Vert Amande για να κλείσετε τη διαμονή σας, να κάνετε ερωτήσεις και να ζητήσετε διαθεσιμότητα.">
     <meta name="twitter:image" content="#SITE_URL#/media/social/la-maison-vert-amande-contact-social.webp">
-    <link rel="icon" type="image/png" href="../media/logo/bebop-favicon.ico">
+    <link rel="icon" type="image/png" href="../media/logo/maison-favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Commissioner:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -34,18 +33,26 @@
         <div id="site-header-placeholder"></div>
 
         <main>
-            <section class="contact-section" aria-label="Section επικοινωνίας">
-                <div class="info-col">
-                    <div class="contact-visual">
-                        <img class="contact-visual-image" src="../media/la-maison-vert-amande-seating-room.webp" alt="Καθιστικό στο La Maison Vert Amande">
-                        <aside class="mission-card">
-                            <img class="mission-card-logo" src="../media/logo/La-maison-logo-green.png" alt="Λογότυπο La Maison Vert Amande">
-                            <p>Μακροχρόνιες συνεργασίες βασισμένες στην εμπιστοσύνη, τη διαφάνεια και μετρήσιμα αποτελέσματα.</p>
-                        </aside>
+
+
+
+            <section class="hero-section contact-hero">
+                <div class="row-container">
+                    <div class="hero-copy hero-info">
+                        <h1 class="h2-section-title hero-title">ΚΡΑΤΗΣΕΙΣ</h1>
+                        <p class="p-hero-section-title">Ζητήστε τη διαμονή σας
+</p>
+                        <p class="hero-description contact-description">Κάντε την κράτησή σας συμπληρώνοντας την παρακάτω φόρμα· επιβεβαιώνουμε κάθε κράτηση προσωπικά, γραπτώς.</p>
+
+
                     </div>
                 </div>
+            </section>
 
-                <div class="form-col">
+
+            <section class="contact-section row-container" aria-label="Φόρμα επικοινωνίας">
+
+                   <div class="form-col">
                     <div class="form-container">
                         <h1 class="contact-form-title">Στείλτε μας μήνυμα</h1>
                         <form action="../send-mail.php" method="POST" id="contactForm">
@@ -54,59 +61,128 @@
 
                             <div class="input-row">
                                 <div class="col-half form-group">
-                                    <label for="name">Όνομα</label>
-                                    <input type="text" id="name" name="name" required placeholder="Το όνομά σας">
+                                    <label for="name">ΟΝΟΜΑ</label>
+                                    <input type="text" id="name" name="name" required placeholder="Γιάννης Παπαδόπουλος">
                                 </div>
                                 <div class="col-half form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required placeholder="Το email σας">
+                                    <label for="email">EMAIL</label>
+                                    <input type="email" id="email" name="email" required placeholder="giannis@example.com">
                                 </div>
                             </div>
 
                             <div class="input-row">
                                 <div class="col-half form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="text" id="phone" name="phone" inputmode="numeric" pattern="[0-9]+" placeholder="Numbers only">
+                                    <label for="phone">ΤΗΛΕΦΩΝΟ</label>
+                                    <input type="text" id="phone" name="phone" inputmode="numeric" pattern="[0-9]+" placeholder="Μόνο αριθμοί">
                                 </div>
                                 <div class="col-half form-group">
-                                    <label for="guests">Number of guests</label>
+                                    <label for="guests">ΑΡΙΘΜΟΣ ΑΤΟΜΩΝ</label>
                                     <input type="number" id="guests" name="guests" required min="1" step="1" inputmode="numeric">
                                 </div>
                             </div>
 
                             <div class="input-row">
                                 <div class="col-half form-group">
-                                    <label for="arrival">ARRIVAL</label>
-                                    <input type="date" id="arrival" name="arrival" required placeholder="mm/dd/yyyy">
+                                    <label for="arrival">ΑΦΙΞΗ</label>
+                                    <input type="date" id="arrival" name="arrival" required placeholder="ηη/μμ/εεεε">
                                 </div>
                                 <div class="col-half form-group">
-                                    <label for="departure">DEPARTURE</label>
-                                    <input type="date" id="departure" name="departure" required placeholder="mm/dd/yyyy">
+                                    <label for="departure">ΑΝΑΧΩΡΗΣΗ</label>
+                                    <input type="date" id="departure" name="departure" required placeholder="ηη/μμ/εεεε">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="subject">Θέμα</label>
+                                <label for="subject">ΘΕΜΑ</label>
                                 <input type="text" id="subject" name="subject" required placeholder="Πώς μπορούμε να βοηθήσουμε;">
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Μήνυμα</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Πληκτρολογήστε το μήνυμά σας εδώ..."></textarea>
+                                <label for="message">ΜΗΝΥΜΑ</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Γράψτε το μήνυμά σας εδώ..."></textarea>
                             </div>
 
-                            <button type="submit" id="submitBtn" data-loading-text="Αποστολή...">Αποστολή μηνύματος</button>
+                            <button type="submit" id="submitBtn" data-loading-text="ΑΠΟΣΤΟΛΗ...">ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ</button>
                             <div id="form-message" role="status" aria-live="polite"></div>
                         </form>
                     </div>
                 </div>
+
+
+
+
+
+                <div class="info-col">
+                    <div class="info-box">
+                        <h2 class="h2-section-title">ΚΡΑΤΗΣΕΙΣ</h2>
+                        <div class="small-divider-left"></div>
+                        <p>Κάθε αίτημα κράτησης μέσω τηλεφώνου ή email επιβεβαιώνεται γραπτώς. Η κράτηση γίνεται οριστική μόνο με την εξόφληση ολόκληρου του ποσού της διαμονής.</p>
+                    <p>Για την ίδια νύχτα — ή λιγότερο από 24 ώρες πριν — παρακαλούμε τηλεφωνήστε μας εκ των προτέρων στο +30 698 080 2532 για να κανονίσουμε την ώρα άφιξής σας. Χωρίς αυτό το τηλεφώνημα δεν μπορούμε να εγγυηθούμε ότι θα είμαστε εκεί να σας υποδεχτούμε.</p>
+
+
+
+                    </div>
+
+                    <div class="info-box">
+                        <h2 class="h2-section-title">ΑΚΥΡΩΣΕΙΣ</h2>
+                        <div class="small-divider-left"></div>
+                        <p>Ακύρωση έως 30 ημέρες πριν από την άφιξη: οφείλεται το 50% του συνολικού ποσού. Από 15 έως 7 ημέρες πριν από την άφιξη: οφείλεται ολόκληρο το ποσό της διαμονής.</p>
+
+                    </div>
+
+                    <div class="four-boxes">
+                        <div class="box">
+                            <p class="box-title">Άφιξη</p>
+                            <p class="box-content">Συνήθως από τις 14:00.</p>
+                        </div>
+
+
+                        <div class="box">
+                            <p class="box-title">Αναχώρηση</p>
+                            <p class="box-content">Έως τις 12:00</p>
+                        </div>
+
+
+                        <div class="box">
+                            <p class="box-title">Απαγορεύεται το κάπνισμα</p>
+                            <p class="box-content">Το κάπνισμα απαγορεύεται σε όλο το σπίτι</p>
+                        </div>
+
+
+                        <div class="box">
+                            <p class="box-title">Όχι κατοικίδια</p>
+                            <p class="box-content">Δεν επιτρέπονται κατοικίδια στο σπίτι.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h2 class="h2-section-title">ΠΛΗΡΩΜΗ</h2>
+                        <div class="small-divider-left"></div>
+
+                        <p>Με την επιβεβαίωση της κράτησης, θα σας στείλουμε email με τα στοιχεία πληρωμής. Μόλις λάβουμε την πληρωμή, σας στέλνουμε email επιβεβαίωσης. Για οποιαδήποτε άλλη ερώτηση, θα χαρούμε να σας απαντήσουμε.</p>
+
+                    </div>
+
+                    <div class="info-box">
+                        <h2 class="h2-section-title">ΑΠΕΥΘΕΙΑΣ ΕΠΙΚΟΙΝΩΝΙΑ</h2>
+                        <div class="small-divider-left"></div>
+                        <p>+30 6980802532</p>
+                        <p>kea33@hotmail.fr</p><br>
+
+
+                    </div>
+
+                </div>
+
+
             </section>
 
-            <div id="site-footer-placeholder"></div>
+           <div id="site-footer-placeholder"></div>
         </main>
     </div>
 
     <script src="../components.js"></script>
     <script src="../send-mail.php?asset=form-handler"></script>
+
 </body>
 </html>

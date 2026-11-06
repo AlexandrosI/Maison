@@ -34,6 +34,13 @@ Sections
     --container-width: min(80%, calc(100% - 10px));
 }
 
+/* Greek pages: Cormorant Garamond and Jost have no Greek letters, so swap in fonts that do */
+html:lang(el) {
+    --font-body: "Commissioner", ui-sans-serif, system-ui, sans-serif;
+    --font-section-heading: "Commissioner", ui-sans-serif, system-ui, sans-serif;
+    --font-section-title: serif;
+}
+
 * {
     box-sizing: border-box;
 }
