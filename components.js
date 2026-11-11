@@ -57,6 +57,21 @@ function loadComponent(url, placeholderId, lang) {
         });
 }
 
+document.addEventListener('click', function(event) {
+    if (!(event.target instanceof Element)) {
+        return;
+    }
+
+    var toggleButton = event.target.closest('.nav-dropdown-toggle');
+
+    if (!toggleButton) {
+        return;
+    }
+
+    var isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+    toggleButton.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+});
+
 function getActiveLanguage(path) {
     var languageMatch = path.match(/^\/(gr|fr)(?=\/|$)/);
 

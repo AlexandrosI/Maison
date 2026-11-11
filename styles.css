@@ -427,13 +427,27 @@ html:lang(el) .p-hero-section-title {
 
 .nav-dropdown {
     position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1032px) {
+    .nav-dropdown {
+        width: 100%;
+    }
+}
+
+.nav-dropdown-toggle {
+    display: none;
 }
 
 .nav-dropdown-link::after {
     content: "\25BE";
     margin-left: 6px;
-    font-size: 0.75em;
+    font-size: 0.95vw;
 }
+
+
 
 .nav-dropdown-menu {
     position: absolute;
@@ -463,9 +477,11 @@ html:lang(el) .p-hero-section-title {
     height: 14px;
 }
 
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu {
-    display: flex;
+@media (min-width: 1033px) {
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu {
+        display: flex;
+    }
 }
 
 .nav-dropdown-menu a {
@@ -592,26 +608,61 @@ font-size:20px;
 
     }
 
-    /* Mobile: products are always listed, indented under OUR PRODUCTS */
+    /* Mobile: product categories are revealed with the adjacent toggle button. */
     .nav-dropdown {
         width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0;
+    }
+
+    .header-nav .nav-dropdown-link {
+        width: auto;
+        flex: 1;
     }
 
     .nav-dropdown-link::after {
         content: none;
     }
 
-    .nav-dropdown-menu,
-    .nav-dropdown:hover .nav-dropdown-menu,
-    .nav-dropdown:focus-within .nav-dropdown-menu {
+    .nav-dropdown-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        min-height: 42px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--color-text);
+        cursor: pointer;
+    }
+
+    .nav-dropdown-toggle::after {
+        content: "\25BE";
+        font-size: 3vh;
+        transition: transform 180ms ease;
+    }
+
+    .nav-dropdown-toggle[aria-expanded="true"]::after {
+        transform: rotate(180deg);
+    }
+
+    .nav-dropdown-menu {
         position: static;
-        display: flex;
+        display: none;
+        flex: 0 0 100%;
         gap: 20px;
         min-width: 0;
         padding: 20px 0 0 18px;
         border: 0;
         box-shadow: none;
         transform: none;
+    }
+
+    .nav-dropdown-toggle[aria-expanded="true"] + .nav-dropdown-menu {
+        display: flex;
+        margin-bottom:30px;
     }
 
     .nav-dropdown-menu::before {
