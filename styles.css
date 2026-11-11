@@ -34,11 +34,11 @@ Sections
     --container-width: min(80%, calc(100% - 10px));
 }
 
-/* Greek pages: Cormorant Garamond and Jost have no Greek letters, so swap in fonts that do */
+/* Greek pages use Source Serif 4 for headings and Commissioner for body text. */
 html:lang(el) {
     --font-body: "Commissioner", ui-sans-serif, system-ui, sans-serif;
-    --font-section-heading: "Commissioner", ui-sans-serif, system-ui, sans-serif;
-    --font-section-title: serif;
+    --font-section-heading: "Source Serif 4", Georgia, serif;
+    --font-section-title: "Source Serif 4", Georgia, serif;
 }
 
 * {
@@ -280,6 +280,16 @@ footer .small-divider-left {
     }
 
     
+}
+
+html:lang(el) .p-hero-section-title {
+    font-size: clamp(calc(3.85rem * 0.7), calc(4.5vw * 0.7), calc(6rem * 0.7));
+}
+
+@media (max-width: 1032px) {
+    html:lang(el) .p-hero-section-title {
+        font-size: clamp(calc(2.4rem * 0.7), calc(5vw * 0.7), calc(4.2rem * 0.7));
+    }
 }
 
 
@@ -991,7 +1001,21 @@ font-size:20px;
     }
 }
 
+html:lang(el) .hero-slide-title {
+    font-size: 7.15vh;
+}
 
+@media (max-width:450px) {
+    html:lang(el) .hero-slide-title {
+        font-size: 3.575vh;
+    }
+}
+
+@media (min-width:451px) and (max-width: 1032px) {
+    html:lang(el) .hero-slide-title {
+        font-size: 6.435vh;
+    }
+}
 
 .hero-slide-description {
     margin: 24px auto 0;
