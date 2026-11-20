@@ -1408,33 +1408,36 @@ html:lang(el) .hero-slide-title {
     background-color: var(--color-surface);
 }
 
-#about {
-       
-background-color: var(--color-background-alt);
-}
+
 
 .about-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: center;
     gap: 60px;
     width: var(--container-width);
 }
 
+#title-product-individual {
+    width: var(--container-width);
+}
+
 @media (min-width: 1921px) {
-    .about-grid {
+    .about-grid,
+    #title-product-individual {
         width:80vw;
     }
 }
 
 @media (min-width: 2881px) {
-    .about-grid {
+    .about-grid,
+    #title-product-individual {
         width:60vw;
     }
 }
 
 @media (max-width: 1366px) {
-    .about-grid {
+    .about-grid,
+    #title-product-individual {
         width:80vw;
     }
 }
@@ -1445,6 +1448,10 @@ background-color: var(--color-background-alt);
         gap: 38px;
         width:80vw;
         
+    }
+
+    #title-product-individual {
+        width:80vw;
     }
 }
 
@@ -1462,7 +1469,7 @@ background-color: var(--color-background-alt);
 
 .about-visual {
     position: relative;
-    padding: 0 22px 22px 0;
+    
 }
 
 .about-visual img {
@@ -1470,7 +1477,12 @@ background-color: var(--color-background-alt);
    
     object-fit: cover;
     border-radius: 3px;
-    margin-bottom:20px;
+}
+
+.about-visual img.about-page-image {
+    display: block;
+    margin-top: 2vh;
+    margin-block-start: 2vh;
 }
 
 
@@ -1576,6 +1588,11 @@ background-color: var(--color-background-alt);
     width: fit-content;
     margin-top: 50px;
     margin-inline: auto;
+}
+
+
+.product-description {
+    background-color:var(--color-background-alt);
 }
 
 @media screen and (max-width:1032px ) {
@@ -1688,7 +1705,8 @@ linear-gradient(10deg,
 
 .two-photos {
     display: flex;
-    gap:25px;
+    gap:2.5vh;
+    margin-top:2.5vh;
 }
 
 .photo1 {
@@ -1700,7 +1718,7 @@ linear-gradient(10deg,
 }
 
 .photo2 {
-    background-image: url("media/la-maison-vert-amande-bathroom.webp");
+    background-image: url("media/bedroom-balcony.webp");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -1721,7 +1739,11 @@ linear-gradient(10deg,
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 50%;
     align-items: stretch;
     gap: 40px;
+    padding-bottom:5vh !important;
 }
+
+
+
 
 .room-photo img {
     display: block;
@@ -1884,10 +1906,7 @@ linear-gradient(10deg,
     margin-bottom:auto;
 }
 
-/* Individual product pages (no hero): keep content clear of the fixed header */
-.product-page {
-    padding-top: 86px;
-}
+
 
 .product-visual-column {
     display:grid;
@@ -1919,10 +1938,12 @@ linear-gradient(10deg,
     background-color: var(--color-background-alt);
 }
 
-
-#recipe-section {
-    background-color: var(--color-background-alt);
+#products-olive-oil {
+    background-color:var(--color-background-alt)
 }
+
+
+
 
 .recipe-grid {
     display: grid;
